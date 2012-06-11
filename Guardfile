@@ -2,9 +2,9 @@
 # More info at https://github.com/guard/guard#readme
 
 guard :shell do
-    watch (%r{^style\.scss}) do |m|
+    watch (%r{^style\.scss$}) do |m|
         `rake deploy`
-        m[0] + " has changed."
+        puts m[0] + " has changed."
         sleep 0
     end
 end 
