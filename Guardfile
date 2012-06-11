@@ -3,7 +3,7 @@
 
 
 guard 'compass' do
-  watch(%r{sass/(.*)\.s[ac]ss/})
+  watch(/^sass\/(.*)\.s[ac]ss/)
 end
 
 # Add files and commands to this file, like the example:
