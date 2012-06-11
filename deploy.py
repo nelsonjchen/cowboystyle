@@ -2,7 +2,7 @@ import sys
 import reddit
 import ConfigParser
 
-print "loading config"
+print "Beginning uploading Style to Subreddit"
 config = ConfigParser.ConfigParser()
 config.read(sys.argv[1])
 username = config.get("user", "username")
@@ -16,5 +16,8 @@ with open("stylesheets/style.css",'r') as file:
 
 r = reddit.Reddit(user_agent = USER_AGENT)
 r.login(username, password)
+print "Logged in"
 sr = r.get_subreddit(subreddit)
+print "Got subreddit"
 sr.set_stylesheet(style)
+print "Finished uploading Style to Subreddit"
