@@ -3,9 +3,8 @@ import reddit
 import ConfigParser
 
 print reddit.__version__
+
 print "loading config"
-
-
 config = ConfigParser.ConfigParser()
 config.read(sys.argv[1])
 username = config.get("user", "username")
