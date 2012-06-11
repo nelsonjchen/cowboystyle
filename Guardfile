@@ -3,13 +3,7 @@
 
 
 guard 'compass' do
-  watch('^sass/(.*)\.s[ac]ss')
-end
-
-guard 'bundler' do
-  watch('Gemfile')
-  # Uncomment next line if Gemfile contain `gemspec' command
-  # watch(/^.+\.gemspec/)
+  watch(%r{sass/(.*)\.s[ac]ss/})
 end
 
 # Add files and commands to this file, like the example:
