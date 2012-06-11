@@ -19,5 +19,6 @@ r.login(username, password)
 print "Logged in"
 sr = r.get_subreddit(subreddit)
 print "Got subreddit"
+print style
 sr.set_stylesheet(style)
 print "Finished uploading Style to Subreddit"
