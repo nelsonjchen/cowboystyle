@@ -1,4 +1,4 @@
 task :deploy do
-  `sass style.scss:style.css`
-  `python deploy.py user.config`
+  sh "sass style.scss:style.css"
+  sh "python deploy.py user.config"
 end
