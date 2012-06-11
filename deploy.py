@@ -2,7 +2,7 @@ import sys
 import reddit
 import ConfigParser
 
-print "Beginning uploading Style to Subreddit"
+print "Beginning uploading CSS to Subreddit"
 config = ConfigParser.ConfigParser()
 config.read(sys.argv[1])
 username = config.get("user", "username")
@@ -20,4 +20,4 @@ print "Logged in"
 sr = r.get_subreddit(subreddit)
 print "Got subreddit"
 sr.set_stylesheet(style)
-print "Finished uploading Style to Subreddit"
+print "Finished uploading CSS to Subreddit"
