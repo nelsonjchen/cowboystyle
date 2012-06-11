@@ -18,3 +18,5 @@ with open("style.css",'r') as file:
 
 r = reddit.Reddit(user_agent = USER_AGENT)
 r.login(username, password)
+sr = r.get_subreddit(subreddit)
+sr.set_stylesheet(style)
