@@ -16,7 +16,5 @@ USER_AGENT = "subreddit css bot for reddit %s" % subreddit
 with open("style.css",'r') as file:
     style = file.read()
 
-r = reddit.reddit(USER_AGENT)
+r = reddit.Reddit(user_agent = USER_AGENT)
 r.login(username, password)
-
-
