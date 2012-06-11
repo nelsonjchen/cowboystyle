@@ -8,3 +8,5 @@ guard :shell do
         sleep 0
     end
 end 
+
+guard 'sass', :input => 'sass', :output => 'css'
