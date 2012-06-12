@@ -27,7 +27,7 @@ print "set style"
 style_set = sr.get_stylesheet()['stylesheet']
 if (style_set != style):
     print "Style that was uploaded was invalid. Manual mode"
-    print style
+    # print style
 else:
     print "Sucessfully uploaded CSS to Subreddit"
 
