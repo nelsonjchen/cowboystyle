@@ -5,3 +5,7 @@ end
 task :compass do
   sh("compass compile")  
 end
+
+task :clipboard do
+  sh("cat stylesheets/style.css | pbcopy")
+end
