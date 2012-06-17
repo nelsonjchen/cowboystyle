@@ -1,9 +1,9 @@
 @import "present";
 @import "compass";
 
-p {
-    color: green;
-}
+$blue: #0039a6;
+$gold: #ffc82e;
 
-.morelink {
+.titlebox h1 {
+    background-color: lighten(blue, 20%);
 }
