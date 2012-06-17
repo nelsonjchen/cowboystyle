@@ -6,4 +6,10 @@ $gold: #ffc82e;
 
 .titlebox h1 {
     background-color: lighten(blue, 20%);
+    border-width: 1px 1px 1px 40px;
+    @include single-box-shadow;
+}
+
+#header-bottom-left {
+    background-color: lighten(blue, 10%);
 }
