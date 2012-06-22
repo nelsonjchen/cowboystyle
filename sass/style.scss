@@ -1,15 +1,15 @@
 @import "present";
 @import "compass";
 
-$blue: #0039a6;
-$gold: #ffc82e;
+$ucsb_blue: #0039a6;
+$ucsb_gold: #ffc82e;
 
 .titlebox h1 {
-    background-color: lighten(blue, 20%);
+    background-color: lighten($ucsb_blue, 20%);
     border-width: 1px 1px 1px 40px;
     @include single-box-shadow;
 }
 
 #header-bottom-left {
-    background-color: lighten(blue, 10%);
+    background-color: lighten($ucsb_blue, 10%);
 }
