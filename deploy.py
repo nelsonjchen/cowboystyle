@@ -1,6 +1,7 @@
 import sys
 import reddit
 import configparser
+import datetime
 
 print("Beginning uploading CSS to Subreddit")
 config = configparser.ConfigParser()
@@ -30,4 +31,4 @@ if (style_set != style):
     # print style
 else:
     print("Sucessfully uploaded CSS to Subreddit")
-
+print(datetime.datetime.now().ctime())
