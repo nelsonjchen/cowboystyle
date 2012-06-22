@@ -5,7 +5,7 @@ $ucsb_blue: #0039a6;
 $ucsb_gold: #ffc82e;
 
 .titlebox h1 {
-    background-color: lighten($ucsb_blue, 20%);
+    background-color: $ucsb_blue;
     border-width: 1px 1px 1px 40px;
     @include single-box-shadow;
 }
