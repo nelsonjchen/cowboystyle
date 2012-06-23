@@ -4,21 +4,6 @@
 $ucsb_blue: #0039a6;
 $ucsb_gold: #ffc82e;
 
-.redditname {
-    background-color: $ucsb_blue;
-    border-width: 1px 1px 1px 40px;
-    position:relative;
-}
-
-.redditname:before {
- content: "";
- position: absolute;
- display: block;
- bottom: -1em;
- border: 1.5em solid #986794;
- z-index: 3;
-}
-
 #header-bottom-left {
     background-color: lighten($ucsb_blue, 10%);
 }
