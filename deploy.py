@@ -27,15 +27,15 @@ print("Logged in")
 sr = r.get_subreddit(subreddit)
 print("Got subreddit")
 style_hash = hashlib.md5(style.encode('UTF-8'))
-style = style + "/*" + style_hash + "*/"
+style = style + "/*" + style_hash.hexdigest() + "*/"
 print("set style")
+sr.set_stylesheet(style)
 style_set = sr.get_stylesheet()['stylesheet']
-if (style_set.find(style_hash) == -1):
+if (style_set.find(style_hash.hexdigest()) == -1):
     print("Style that was uploaded was invalid. Manual mode")
-    # d = difflib.Differ()
-    # result = list(d.compare(style_set.splitlines(1),style.splitlines(1)))
-    # pprint(result)
-    # print style
+    d = difflib.Differ()
+    result = list(d.compare(style_set.splitlines(1),style.splitlines(1)))
+    pprint(result)
 else:
     print("Sucessfully uploaded CSS to Subreddit")
 print(datetime.datetime.now().ctime())

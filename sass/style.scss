@@ -33,3 +33,19 @@ body {
     background-color: $ucsb_blue;
 }
 
+/*Witchcraftery. Burn ! Burn! */
+.titlebox .usertext .md > h1:after {
+    display: block;
+    content: "";
+    border-color: transparent #009933 transparent transparent;
+    border-style: solid;
+    border-width: 15px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    margin-left: -35px;
+    margin-top: -10px
+}
+
+
