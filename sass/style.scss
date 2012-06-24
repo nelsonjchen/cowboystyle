@@ -14,6 +14,14 @@ h1:first-letter {
     background-color: red;
 }
 
+body {
+    background-color: lighten($ucsb_gold, 30%);
+}
+
+.side {
+    background-color: transparent;
+}
+
 .titlebox{
     padding: 10px;
     border: 1px solid $ucsb_blue;
