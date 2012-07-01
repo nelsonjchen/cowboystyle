@@ -8,12 +8,6 @@ $ucsb_gold: #ffc82e;
     background-color: lighten($ucsb_blue, 10%);
 }
 
-h1:first-letter {
-    font-weight: bold;
-    font-size: 300%;
-    background-color: red;
-}
-
 body {
     background-color: lighten($ucsb_gold, 30%);
 }
@@ -26,7 +20,7 @@ body {
     padding: 10px;
     border: 1px solid $ucsb_blue;
     @include border-radius(5px);
-    background-image: url(%%test%%);
+    /* background-image: url(%%test%%); */
 }
 
 .titlebox .usertext .md > h1 {
