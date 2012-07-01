@@ -25,6 +25,9 @@ body {
 
 .titlebox .usertext .md > h1 {
     background-color: $ucsb_blue;
+    color: white;
+    margin-left: -18px;
+    padding-left: 20px;
 }
 
 /*Witchcraftery. Burn ! Burn! */
@@ -42,4 +45,8 @@ body {
     margin-top: -10px
 }
 
-
+.titlebox .usertext .md {
+margin: 0;
+padding: 0;
+overflow: visible;
+}
