@@ -25,10 +25,12 @@ body {
 }
 
 .titlebox .usertext .md > h1 {
-    background-color: $ucsb_blue;
+    background-color: lighten($ucsb_blue, 15%);
     color: white;
     margin-left: -18px;
     padding-left: 20px;
+    margin-right: -18px;
+    padding-right: 20px;
 }
 
 /*Witchcraftery. Burn ! Burn! */
