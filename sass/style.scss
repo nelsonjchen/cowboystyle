@@ -35,18 +35,16 @@ body {
 }
 
 .side > .spacer:first-child {
-    
+    padding-top: 280px;
+    background-image: url(%%storke-top%%);
 }
 
 .side > .spacer:nth-child(2) {
-    padding-top: 280px;
-    background-image: url(%%storke-top-2x%%);
-    // Someday...
-    /* background-size: 300px 280px; */
 }
 
 .side {
-    background-color: $sky-color
+    background-color: $sky-color;
+    background-image: url(%%storke-mid-very-temporary%%);
 }
 
 .titlebox {
