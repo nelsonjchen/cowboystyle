@@ -44,17 +44,21 @@ body {
 .side > .spacer:nth-child(2) {
 }
 
+@mixin roundbox {
+    padding: 10px;
+    border: 1px solid $ucsb_blue;
+    @include border-radius(5px);
+    background-color: white;
+}
+
 .side {
     background-color: $sky-color;
     background-image: url(%%storke-mid-very-temporary%%);
 
 }
 
-.titlebox {
-    padding: 10px;
-    border: 1px solid $ucsb_blue;
-    @include border-radius(5px);
-    background-color: white;
+.titlebox, #moderation_tools {
+    @include roundbox;
 }
 
 .titlebox .usertext .md > h1 {
