@@ -2,25 +2,23 @@
 @import "compass";
 
 $ucsb_blue: #0039a6;
+$ucsb_blue_alt: #00338e;
 $ucsb_gold: #ffc82e;
 
+$sky_color: lighten(#87CEFA, 10%);
+
 #header-bottom-left {
-    background-color: lighten($ucsb_blue, 10%);
+    background-color: $ucsb_blue_alt;
 }
 
 body {
-    background-color: lighten($ucsb_gold, 30%);
-}
-
-.side {
-    background-color: transparent;
+    background-color: $sky_color;
 }
 
 .titlebox {
     padding: 10px;
     border: 1px solid $ucsb_blue;
     @include border-radius(5px);
-    /* background-image: url(%%test%%); */
     background-color: white;
 }
 
