@@ -37,6 +37,8 @@ body {
 .side > .spacer:first-child {
     padding-top: 280px;
     background-image: url(%%storke-top%%);
+    background-color: $sky-color;
+    margin: 0;
 }
 
 .side > .spacer:nth-child(2) {
@@ -45,6 +47,7 @@ body {
 .side {
     background-color: $sky-color;
     background-image: url(%%storke-mid-very-temporary%%);
+
 }
 
 .titlebox {
