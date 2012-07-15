@@ -11,6 +11,8 @@ $sky_color: lighten(#87CEFA, 10%);
 
 $header_color: #0062da;
 
+// HEADER
+
 #header-bottom-left {
     background-color: $header_color;
 }
@@ -33,6 +35,8 @@ body {
     text-transform: capitalize;
     color: $ucsb_gold;
 }
+
+// SIDEBAR
 
 .side > .spacer:first-child {
     padding-top: 280px;
@@ -70,14 +74,8 @@ body {
     padding-right: 20px;
 }
 
-/* .link { */
-    /* padding-right: 310px; */
-/* } */
-
-.content {
-    margin-right: 317px;
-    border-radius: 5px;
-    background-color: white;
+.sidebox.create, .sidebox.submit  {
+    display: none;
 }
 
 /*Witchcraftery. Burn ! Burn! */
@@ -99,4 +97,12 @@ body {
     margin: 0;
     padding: 0;
     overflow: visible;
+}
+
+// CONTENT
+
+.content {
+    margin-right: 317px;
+    border-radius: 5px;
+    background-color: white;
 }
