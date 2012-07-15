@@ -1,6 +1,8 @@
 @import "present";
 @import "compass";
 
+// Pulled stuff from /r/modclub and some typography stuff from /r/gentlemanboners.
+
 $ucsb_blue: #0039a6;
 $ucsb_blue_alt: #00338e;
 $ucsb_gold: #ffc82e;
@@ -15,6 +17,21 @@ $header_color: #0062da;
 
 body {
     background-color: $sky_color;
+}
+
+#header-img {
+    height: 40px;
+    width: 120px;
+}
+
+.pagename, .pagename a {
+    font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
+                  Palatino, georgia, garamond, FreeSerif, serif;
+    font-size: 15px;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    color: $ucsb_gold;
+    content: "UCSantaBarbara";
 }
 
 .titlebox {
