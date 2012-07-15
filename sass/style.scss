@@ -27,11 +27,10 @@ body {
 .pagename, .pagename a {
     font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
                   Palatino, georgia, garamond, FreeSerif, serif;
-    font-size: 15px;
+    font-size: 1.25em;
     font-variant: small-caps;
     text-transform: capitalize;
     color: $ucsb_gold;
-    content: "UCSantaBarbara";
 }
 
 .titlebox {

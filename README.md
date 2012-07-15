@@ -27,3 +27,9 @@ This bot switches between night and day versions. It calculates the altitude of
 the sun at the campus and switches to night once the sun is below horizon or to
 day once just below horizon. This shouldn't use any external services and
 should be pretty optional.
+
+
+## Random Notes
+Modded Official logo from http://satedproductions.com/tmp/reddit/alien/
+Export at 144dpi to make it work for Retina displays.
+
