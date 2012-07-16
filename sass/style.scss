@@ -44,6 +44,7 @@ body {
 .side > .spacer:first-child {
     padding-top: 280px;
     background-image: url(%%storke-top%%);
+    background-position: 8px 0;
     background-color: $sky-color;
     margin: 0;
 }
@@ -62,16 +63,18 @@ body {
     background-color: $sky-color;
     background-image: url(%%storke-middle%%);
     margin: 0px 8px 0px 8px;
+    background-position: 8px 0;
 }
 
 .titlebox, #moderation_tools, .sidecontentbox {
     @include roundbox;
 }
 
-
+// We'll be using the userbox to do this.
 .sidebox.create, .sidebox.submit  {
     display: none;
 }
+
 .titlebox .usertext .md > h1 {
     background-color: lighten($ucsb_blue, 15%);
     color: white;
