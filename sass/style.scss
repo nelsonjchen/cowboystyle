@@ -1,7 +1,7 @@
 @import "present";
 @import "compass";
 
-// Pulled stuff from /r/modclub and some typography stuff from /r/gentlemanboners.
+// Pulled stuff from /r/modclub and some typography stuff from /r/gentlemanboners. Those reddits also used other subreddits for stuff as well.
 
 $ucsb_blue: #0039a6;
 $ucsb_blue_alt: #00338e;
@@ -56,7 +56,9 @@ body {
     padding: 10px;
     border: 1px solid $ucsb_blue;
     @include border-radius(5px);
-    background-color: white;
+    background-color: #008080;
+    background: #008080 none no-repeat scroll center left;
+    color: white;
 }
 
 .side {
