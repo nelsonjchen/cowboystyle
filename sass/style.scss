@@ -41,6 +41,10 @@ body {
 
 // SIDEBAR
 
+.titlebox > .redditname {
+    display: none;
+}
+
 .side > .spacer:first-child {
     padding-top: 280px;
     background-image: url(%%storke-top%%);
