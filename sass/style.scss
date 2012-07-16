@@ -110,7 +110,7 @@ body {
 
 .content {
     margin-right: 317px;
-    border-radius: 5px;
+    @include border-radius(5px);
     background-color: white;
 }
 
