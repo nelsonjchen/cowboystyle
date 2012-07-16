@@ -75,7 +75,7 @@ body {
 }
 
 .titlebox .usertext .md > h1 {
-    background-color: lighten($ucsb_blue, 15%);
+    background-color: $header_color;
     color: white;
     margin-left: -18px;
     padding-left: 20px;
@@ -89,7 +89,7 @@ body {
 .titlebox .usertext .md > h1:after {
     display: block;
     content: "";
-    border-color: transparent darken($ucsb_blue, 10%) transparent transparent;
+    border-color: transparent darken($header_color, 10%) transparent transparent;
     border-style: solid;
     border-width: 15px;
     height: 0px;
