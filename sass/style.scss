@@ -66,6 +66,7 @@ body {
 
 .titlebox, #moderation_tools, .sidecontentbox {
     @include roundbox;
+    background-color: white;
 }
 
 // We'll be using the userbox to do this.
