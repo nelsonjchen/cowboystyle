@@ -9,7 +9,7 @@ $ucsb_gold: #ffc82e;
 
 $sky_color: lighten(#87CEFA, 10%);
 
-$header_color: #0062da;
+$header_color: darken(#0062da,5%);
 
 // HEADER
 
@@ -112,5 +112,6 @@ body {
     margin-right: 317px;
     @include border-radius(5px);
     background-color: white;
+    box-shadow: 0px 0px 5px white;
 }
 
