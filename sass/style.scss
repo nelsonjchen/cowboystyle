@@ -37,6 +37,20 @@ $header_color: darken(#0062da,5%);
     top: 0 !important;
 }
 
+// Normal Variant
+
+#header-bottom-right {
+    top: 0;
+    height: 12px;
+    @include border-top-left-radius(0);
+    @include border-bottom-left-radius(7px);
+    padding-left: 10px;
+}
+
+.width-clip {
+    right: 300px !important;
+}
+
 // HEADER
 
 #header-bottom-left {
