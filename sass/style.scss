@@ -14,8 +14,28 @@ $header_color: darken(#0062da,5%);
 
 // SUBREDDIT BAR
 
+// RES Variant
 
+#srLeftContainer {
+    max-height: 19px !important;
+    height: 19px !important;
+}
 
+#RESShortcutsViewport {
+    padding-left: 60px;
+}
+
+#RESShortcutsEditContainer {
+    position: relative !important;
+    float: left;
+    top: -18px !important;
+    left: -4px;
+    height: 1px !important;
+}
+
+.res-navTop {
+    top: 0 !important;
+}
 
 // HEADER
 
