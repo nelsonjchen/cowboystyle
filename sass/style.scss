@@ -268,3 +268,8 @@ body {
     padding: 7px 0;
 }
 
+// RES do not do dashed borders
+.entry.keyHighlight {
+    outline-width: 0;
+    border-right: 1px solid blue;
+}
