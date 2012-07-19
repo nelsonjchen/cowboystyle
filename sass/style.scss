@@ -57,7 +57,11 @@ $header_color: darken(#0062da,5%);
     background-color: $header_color;
     background-image: url(%%storke-top%%);
     background-repeat: repeat-y;
-    background-position: right;
+    background-position: 100% 0%;
+}
+
+#header {
+    border-bottom: 0;
 }
 
 body {
@@ -92,7 +96,7 @@ body {
 .side > .spacer:first-child {
     padding-top: 280px;
     background-image: url(%%storke-top%%);
-    background-position: 8px 0;
+    background-position: 8px -48px;
     background-color: $sky-color;
     margin: 0;
 }
