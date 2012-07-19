@@ -131,14 +131,24 @@ body {
     display: none;
 }
 
-.side a[href*="#submitlink"], .side a[href*="#selfpost"] {
+@mixin submit-link {
     border-radius: 5px;
     background-color: #2F65A5;
     color: #FFDD56;
-    padding: 5px 12.5px;
+    padding: 5px 23px;
     font-size: 20px;
     font-weight: bold;
     text-shadow: 2px 2px 3px black;
+    width: 100%;
+}
+
+.side a[href*="#submitlink"] {
+    @include submit-link;
+    padding: 5px 52px;
+}
+
+.side a[href*="#selfpost"] {
+    @include submit-link;
 }
 
 @mixin submit-button {
