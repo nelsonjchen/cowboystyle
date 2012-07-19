@@ -61,6 +61,7 @@ $userbar_color: $ucsb_blue;
     height: 1px !important;
     width: 0 !important;
     left: 40px;
+    z-index: 7 !important;
 }
 
 #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
