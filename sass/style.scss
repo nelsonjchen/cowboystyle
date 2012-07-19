@@ -8,6 +8,7 @@
 // r/chrome: moving the userbar up
 // r/apple: touches here and there
 // r/baseball: submit links
+// RES: Night mode for quick inspiration
 
 $ucsb_blue: #0039a6;
 $ucsb_blue_alt: #00338e;
@@ -17,7 +18,24 @@ $sky_color: lighten(#87CEFA, 10%);
 
 $header_color: darken(#0062da,5%);
 
+$subreddit_bar_color: #2D2D2D;
+$subreddit_bar_seperator_color: gray;
+$subreddit_bar_link_color: #CCC;
+
 // SUBREDDIT BAR
+
+#sr-header-area {
+    background-color: $subreddit_bar_color;
+}
+
+#header #sr-header-area a, #sr-more-link, .srdrop > .selected {
+    color: $subreddit_bar_link_color !important;
+    background-color: $subreddit_bar_color;
+}
+
+.srSep {
+    color: $subreddit_bar_seperator_color;
+}
 
 // RES Variant
 
@@ -27,7 +45,7 @@ $header_color: darken(#0062da,5%);
 }
 
 #RESShortcutsViewport {
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 #RESShortcutsEditContainer {
@@ -36,6 +54,13 @@ $header_color: darken(#0062da,5%);
     top: -18px !important;
     left: -4px;
     height: 1px !important;
+    width: 0 !important;
+    left: 40px;
+}
+
+#RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+    background-color: $subreddit_bar_color !important;
+    color: $subreddit_bar_link_color !important; 
 }
 
 .res-navTop {
