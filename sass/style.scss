@@ -246,8 +246,17 @@ body {
 
 .content {
     margin-left: 8px;
-    margin-right: 317px;
+    margin-right: 330px;
     @include border-radius(5px);
     background-color: white;
+    padding: 5px 15px;
+}
+
+.link {
+    &:first-child {
+        border-top: 0;
+    }
+    border-top: 1px solid lighten(gray, 40%);
+    padding: 7px 0;
 }
 
