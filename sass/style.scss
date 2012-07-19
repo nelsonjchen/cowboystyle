@@ -1,8 +1,13 @@
 @import "present";
 @import "compass";
 
-// Pulled stuff from /r/modclub and some typography stuff from /r/gentlemanboners and menu bar from /r/chrome.
-// Those reddits also used other subreddits for stuff as well.
+// Credit for stuff from other subreddits
+// r/Modclub: General inspiration and reference for other subreddits to pull from
+// r/Music: the origin of the stick out headers?
+// r/gentlemanboners: Typography for header
+// r/chrome: moving the userbar up
+// r/apple: touches here and there
+// r/baseball: submit links
 
 $ucsb_blue: #0039a6;
 $ucsb_blue_alt: #00338e;
@@ -121,9 +126,13 @@ body {
     background-color: white;
 }
 
-// We'll be using the userbox to do this.
+// We'll be using the userbox to do submitting stuff.
 .sidebox.create, .sidebox.submit  {
     display: none;
+}
+
+.side a[href*="#submitlink"], .side a[href*="#selfpost"] {
+    background-color: green;
 }
 
 .titlebox .usertext .md > h1 {
