@@ -22,6 +22,8 @@ $subreddit_bar_color: #2D2D2D;
 $subreddit_bar_seperator_color: gray;
 $subreddit_bar_link_color: #CCC;
 
+$userbar_color: $ucsb_blue;
+
 // SUBREDDIT BAR
 
 #sr-header-area {
@@ -68,6 +70,13 @@ $subreddit_bar_link_color: #CCC;
     z-index: 10 !important;
 }
 
+#userbarToggle {
+    background-color: darken($userbar_color, 10%) !important;
+    border-right-color: darken($userbar_color, 15%) !important;
+    color: $ucsb_gold !important;
+    min-height: 27px; // HotFix till they really fix this.
+}
+
 // Normal Variant
 
 #header-bottom-right {
@@ -76,6 +85,10 @@ $subreddit_bar_link_color: #CCC;
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(7px);
     padding-left: 10px;
+    background-color: $userbar_color;
+    a, b, &>.separator {
+        color: $ucsb_gold;
+    }
 }
 
 .width-clip {
