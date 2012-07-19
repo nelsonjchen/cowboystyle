@@ -17,6 +17,8 @@ $sky_color: lighten(#87CEFA, 10%);
 
 $header_color: darken(#0062da,5%);
 
+$subreddit_bar_color: #2D2D2D;
+
 // SUBREDDIT BAR
 
 // RES Variant
@@ -36,6 +38,8 @@ $header_color: darken(#0062da,5%);
     top: -18px !important;
     left: -4px;
     height: 1px !important;
+    width: 0 !important;
+    left: 40px;
 }
 
 .res-navTop {
