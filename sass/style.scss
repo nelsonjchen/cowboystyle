@@ -55,6 +55,9 @@ $header_color: darken(#0062da,5%);
 
 #header-bottom-left {
     background-color: $header_color;
+    background-image: url(%%storke-top%%);
+    background-repeat: repeat-y;
+    background-position: right;
 }
 
 body {
