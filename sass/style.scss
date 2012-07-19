@@ -128,6 +128,14 @@ $userbar_color: $ucsb_blue;
     color: $ucsb_gold;
 }
 
+// This Yellows the tabs
+
+.tabmenu li a {
+    background-color: $ucsb_gold;
+    color: $ucsb_blue;
+}
+
+
 // SIDEBAR
 
 // Hide name
