@@ -18,8 +18,22 @@ $sky_color: lighten(#87CEFA, 10%);
 $header_color: darken(#0062da,5%);
 
 $subreddit_bar_color: #2D2D2D;
+$subreddit_bar_seperator_color: gray;
 
 // SUBREDDIT BAR
+
+#sr-header-area {
+    background-color: $subreddit_bar_color;
+}
+
+#header #sr-header-area a, #sr-more-link, .srdrop > .selected {
+    color: #CCC !important;
+    background-color: $subreddit_bar_color;
+}
+
+.srSep {
+    color: $subreddit_bar_seperator_color;
+}
 
 // RES Variant
 
