@@ -178,14 +178,18 @@ $userbar_color: $ucsb_blue;
 }
 
 @mixin submit-link {
-    border-radius: 5px;
+    @include border-radius(5px);
     background-color: $ucsb_blue;
-    color: $ucsb_gold;
-    padding: 5px 23px;
+    color: white;
+    padding: 5px;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    float: left;
+    width: 250px;
+    text-align: center;
+    margin: 5px;
     /* text-shadow: 2px 2px 3px black; */
-    width: 100%;
     &:hover {
         color: red;
     }
@@ -193,7 +197,7 @@ $userbar_color: $ucsb_blue;
 
 .side a[href*="#submitlink"] {
     @include submit-link;
-    padding: 5px 52px;
+    /* padding: 5px 52px; */
 }
 
 .side a[href*="#selfpost"] {
