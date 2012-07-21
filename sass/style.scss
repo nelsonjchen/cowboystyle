@@ -139,6 +139,9 @@ $userbar_color: $ucsb_blue;
 
 // SIDEBAR
 
+$sidebar_width: 300px;
+
+
 // Hide name
 .titlebox > .redditname {
     display: none;
@@ -155,9 +158,11 @@ $userbar_color: $ucsb_blue;
 .side > .spacer:nth-child(2) {
 }
 
+$sidebox_border_width: 5px;
+
 @mixin roundbox {
-    padding: 10px;
-    border: 1px solid $ucsb_blue;
+    padding: 11 - $sidebox_border_width;
+    border: $sidebox_border_width solid $ucsb_blue;
     @include border-radius(5px);
 }
 
