@@ -1,7 +1,8 @@
-task :deploy do
-  puts "Deploying Day"
+task :deploy_day do
   sh "python deploy.py day.config"
-  puts "Deploying Night"
+end
+
+task :deploy_night do
   sh "python deploy.py night.config"
 end
 
