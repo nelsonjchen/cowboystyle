@@ -15,3 +15,7 @@ guard 'shell' do
      `rake deploy`
     end
 end
+
+guard 'rake', :task => 'build' do
+  watch(%r{^my_file.rb})
+end
