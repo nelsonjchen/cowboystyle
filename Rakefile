@@ -6,6 +6,10 @@ task :compass do
   sh("compass compile")  
 end
 
-task :clipboard do
-  sh("cat stylesheets/style.css | pbcopy")
+task :clipboard_day do
+  sh("cat stylesheets/day.css | pbcopy")
+end
+
+task :clipboard_night do
+  sh("cat stylesheets/night.css | pbcopy")
 end
