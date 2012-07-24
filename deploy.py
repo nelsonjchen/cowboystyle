@@ -12,12 +12,14 @@ config.read(sys.argv[1])
 username = config.get("user", "username")
 password = config.get("user", "password")
 subreddit = config.get("user", "subreddit")
+filename = config.get("user", "file")
 
 USER_AGENT = "subreddit css bot for reddit %s" % subreddit
+USER_AGENT = "uploading %s" % filename
 
 print(USER_AGENT)
 
-with open("stylesheets/style.css",'r') as file:
+with open(filename, 'r') as file:
     style = file.read()
 
 print("Going to Reddit")

@@ -1,36 +1,3 @@
-@import "present";
-@import "compass";
-
-// Credit for stuff from other subreddits
-// r/Modclub: General inspiration and reference for other subreddits to pull from
-// r/Music: the origin of the stick out headers?
-// r/gentlemanboners: Typography for header
-// r/chrome: moving the userbar up
-// r/apple: touches here and there
-// r/baseball: submit links
-// r/UCSD: Dark Bluish Userbar
-// r/UCR: Yellow Tabs
-// r/surfing: Ideas on getting a surfboard back into the header
-// r/battlefield3: Not sure yet
-// RES: Night mode for quick inspiration
-
-$ucsb_blue: #0039a6;
-$ucsb_blue_alt: #00338e;
-$ucsb_gold: #ffc82e;
-
-$sky_color: lighten(#87CEFA, 10%);
-
-$header_color: darken(#0062da,5%);
-
-$subreddit_bar_color: #2D2D2D;
-$subreddit_bar_seperator_color: gray;
-$subreddit_bar_link_color: #CCC;
-
-$userbar_color: $ucsb_blue;
-
-$content_and_sidebar_background_color: white;
-$content_and_sidebar_border_color: #FFF8E7;
-
 // SUBREDDIT BAR
 
 #sr-header-area {
