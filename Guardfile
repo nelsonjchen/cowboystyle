@@ -1,6 +1,10 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+if File.exist?('/mach_kernel')
+    notification :growl
+end
+
 
 guard 'compass' do
   watch(/^sass\/(.*)\.s[ac]ss/)
