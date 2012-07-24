@@ -28,6 +28,9 @@ $subreddit_bar_link_color: #CCC;
 
 $userbar_color: $ucsb_blue;
 
+$content_and_sidebar_background_color: white;
+$content_and_sidebar_border_color: #FFF8E7;
+
 // SUBREDDIT BAR
 
 #sr-header-area {
@@ -158,11 +161,15 @@ $sidebar_width: 300px;
 .side > .spacer:nth-child(2) {
 }
 
+.titlebox form.toggle, .leavemoderator {
+    background-color: $content_and_sidebar_background_color;
+}
+
 $sidebox_border_width: 5px;
 
 @mixin roundbox {
     padding: 11 - $sidebox_border_width;
-    border: $sidebox_border_width solid $ucsb_blue;
+    border: $sidebox_border_width solid $content_and_sidebar_border_color;
     @include border-radius(5px);
 }
 
@@ -174,7 +181,7 @@ $sidebox_border_width: 5px;
 
 .titlebox, #moderation_tools, .sidecontentbox {
     @include roundbox;
-    background-color: white;
+    background-color: $content_and_sidebar_background_color;
 }
 
 // We'll be using the userbox to do submitting stuff.
@@ -266,7 +273,8 @@ body {
     margin-left: 8px;
     margin-right: 330px;
     @include border-radius(5px);
-    background-color: white;
+    background-color: $content_and_sidebar_background_color;
+    border: 5px solid $content_and_sidebar_border_color;
     padding: 5px 15px;
 }
 
