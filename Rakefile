@@ -3,6 +3,7 @@ task :deploy_day do
 end
 
 task :deploy_night do
+  # puts "night!!"
   sh "python deploy.py night.config"
 end
 

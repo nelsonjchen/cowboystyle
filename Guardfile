@@ -8,11 +8,9 @@ end
 
 # Add files and commands to this file, like the example:
 #   watch(%r{file/path}) { `command(s)` }
-
-guard 'rake', :task => 'deploy_day', :run_on_start => false do
-    watch(%r{stylesheets/day\.css})
+#
+guard 'shell' do
+    watch(%r{stylesheets/day\.css}) {`rake deploy_day`}
+    watch(%r{stylesheets/night\.css}) {`rake deploy_night`}
 end
 
-guard 'rake', :task => 'deploy_night', :run_on_start => false do
-    watch(%r{stylesheets/night\.css})
-end
