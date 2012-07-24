@@ -3,3 +3,4 @@ night.config
 user.config
 .sass-cache/
 stylesheets/
+Gemfile.lock
