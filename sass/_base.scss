@@ -1,0 +1,260 @@
+// SUBREDDIT BAR
+
+#sr-header-area {
+    background-color: $subreddit_bar_color;
+}
+
+#header #sr-header-area a, #sr-more-link, .srdrop > .selected {
+    color: $subreddit_bar_link_color !important;
+    background-color: $subreddit_bar_color;
+}
+
+.srSep {
+    color: $subreddit_bar_seperator_color;
+}
+
+// RES Variant
+
+#srLeftContainer {
+    max-height: 19px !important;
+    height: 19px !important;
+}
+
+#RESShortcutsViewport {
+    padding-left: 50px;
+}
+
+#RESShortcutsEditContainer {
+    position: relative !important;
+    float: left;
+    top: -18px !important;
+    left: -4px;
+    height: 1px !important;
+    width: 0 !important;
+    left: 40px;
+    z-index: 7 !important;
+}
+
+#RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+    background-color: $subreddit_bar_color !important;
+    color: $subreddit_bar_link_color !important; 
+}
+
+.res-navTop {
+    top: 0 !important;
+    z-index: 10 !important;
+}
+
+#userbarToggle {
+    background-color: darken($userbar_color, 10%) !important;
+    border-right-color: darken($userbar_color, 15%) !important;
+    color: $ucsb_gold !important;
+    min-height: 27px; // HotFix till they really fix this.
+}
+
+// Normal Variant
+
+#header-bottom-right {
+    top: 0;
+    height: 12px;
+    @include border-top-left-radius(0);
+    @include border-bottom-left-radius(7px);
+    padding-left: 10px;
+    background-color: $userbar_color;
+    a, b, &>.separator {
+        color: $ucsb_gold;
+    }
+}
+
+.width-clip {
+    right: 300px !important;
+}
+
+// HEADER
+
+#header-bottom-left {
+    background-color: $header_color;
+    background-image: url(%%storke-top%%);
+    background-repeat: repeat-y;
+    background-position: 100% 0%;
+}
+
+#header {
+    border-bottom: 0;
+}
+
+
+#header-img {
+    height: 40px;
+    width: 140px;
+}
+
+// Serif lettering based off of /r/gentlemanboners
+.pagename, .pagename a {
+    font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
+                  Palatino, georgia, garamond, FreeSerif, serif;
+    font-size: 16px;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    color: $ucsb_gold;
+}
+
+// This Yellows the tabs
+
+.tabmenu li a {
+    background-color: $ucsb_gold;
+    color: $ucsb_blue;
+}
+
+
+// SIDEBAR
+
+$sidebar_width: 300px;
+
+
+// Hide name
+.titlebox > .redditname {
+    display: none;
+}
+
+.side > .spacer:first-child {
+    padding-top: 280px;
+    background-image: url(%%storke-top%%);
+    background-position: 8px -48px;
+    background-color: $sky-color;
+    margin: 0;
+}
+
+.side > .spacer:nth-child(2) {
+}
+
+.titlebox form.toggle, .leavemoderator {
+    background-color: $content_and_sidebar_background_color;
+}
+
+$sidebox_border_width: 5px;
+
+@mixin roundbox {
+    padding: 11 - $sidebox_border_width;
+    border: $sidebox_border_width solid $content_and_sidebar_border_color;
+    @include border-radius(5px);
+}
+
+.side {
+    background-color: transparent;
+    margin: 0px 8px 0px 8px;
+    background-position: 8px 0;
+}
+
+.titlebox, #moderation_tools, .sidecontentbox {
+    @include roundbox;
+    background-color: $content_and_sidebar_background_color;
+}
+
+// We'll be using the userbox to do submitting stuff.
+.sidebox.create, .sidebox.submit  {
+    display: none;
+}
+
+@mixin submit-link {
+    @include border-radius(5px);
+    background-color: $ucsb_blue;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    float: left;
+    width: 250px;
+    text-align: center;
+    margin: 5px;
+    /* text-shadow: 2px 2px 3px black; */
+    &:hover {
+        color: red;
+    }
+}
+
+.side a[href*="#submitlink"] {
+    @include submit-link;
+    /* padding: 5px 52px; */
+}
+
+.side a[href*="#selfpost"] {
+    @include submit-link;
+}
+
+@mixin submit-button {
+    margin: 20px 0;
+}
+
+.md p:first-child {
+    @include submit-button;
+}
+
+.md p:nth-child(2) {
+    @include submit-button;
+}
+
+.titlebox .usertext .md > h1 {
+    background-color: $header_color;
+    color: white;
+    margin-left: -18px;
+    padding-left: 20px;
+    margin-right: -18px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+// Witchcraft for the little wraparound on the H1 elements
+.titlebox .usertext .md > h1:after {
+    display: block;
+    content: "";
+    border-color: transparent darken($header_color, 10%) transparent transparent;
+    border-style: solid;
+    border-width: 15px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    margin-left: -35px;
+    margin-top: -10px
+}
+
+.titlebox .usertext .md {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+// CONTENT
+
+body {
+    background-color: $sky_color;
+    background-image: url(%%storke-middle%%);
+    background-repeat: repeat-y;
+    background-position: 100% 70px;
+}
+
+.content {
+    margin-left: 8px;
+    margin-right: 330px;
+    @include border-radius(5px);
+    background-color: $content_and_sidebar_background_color;
+    border: 5px solid $content_and_sidebar_border_color;
+    padding: 5px 15px;
+}
+
+.link {
+    &:first-child {
+        border-top: 0;
+    }
+    border-top: 1px solid lighten(gray, 40%);
+    padding: 7px 0;
+}
+
+// RES do not do dashed borders
+.entry.keyHighlight {
+    outline-width: 0;
+    border-right: 1px solid blue;
+}
