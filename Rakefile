@@ -2,7 +2,7 @@ task :deploy do
   puts "Deploying Day"
   sh "python deploy.py day.config"
   puts "Deploying Night"
-  sh "python deploy.py day.config"
+  sh "python deploy.py night.config"
 end
 
 task :compass do

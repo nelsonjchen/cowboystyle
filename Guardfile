@@ -11,10 +11,7 @@ end
 #
 guard 'shell' do
     watch(/(.*).txt/) {|m| `tail #{m[0]}` }
-    watch(%r{stylesheets/day\.css}) do
-     `rake deploy`
-    end
-    watch(%r{stylesheets/night\.css}) do
+    watch(%r{stylesheets/(day|night)\.css}) do
      `rake deploy`
     end
 end
