@@ -258,6 +258,7 @@ body {
 .thing {
     .title {
         // For non-logged in lusers or not users whatever.
+        color: $item_unvisited_color;
         &:visited, &.click {
             color: $item_visited_color;
         }
