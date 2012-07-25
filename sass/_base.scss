@@ -1,3 +1,9 @@
+// Globalish
+
+a {
+    color: $user_link_color;
+}
+
 // SUBREDDIT BAR
 
 #sr-header-area {
@@ -234,6 +240,7 @@ body {
     background-image: $storke_middle_img;
     background-repeat: repeat-y;
     background-position: 100% 70px;
+    color: $plain_text_color;
 }
 
 .content {
@@ -269,6 +276,11 @@ body {
             }
         }
     }
+}
+
+.tagline a {
+    // user color
+    color: $user_link_color;
 }
 
 // RES do not do dashed borders
