@@ -1,8 +1,8 @@
 @import "colors/ucsb";
 
-$sky_color: darken(#87CEFA, 60%);
+$sky_color: darken(#87CEFA, 70%);
 
-$header_color: darken(#0062da,5%);
+$header_color: darken(#0062da,25%);
 
 $subreddit_bar_color: #2D2D2D;
 $subreddit_bar_seperator_color: gray;
@@ -11,4 +11,7 @@ $subreddit_bar_link_color: #CCC;
 $userbar_color: $ucsb_blue;
 
 $content_and_sidebar_background_color: #2d2d2d;
-$content_and_sidebar_border_color: #FFF8E7;
+$content_and_sidebar_border_color: #504d44;
+
+$storke_top_img: url(%%storke-top-night%%);
+$storke_middle_img: url(%%storke-middle-fullbright%%);
