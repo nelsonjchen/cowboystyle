@@ -15,3 +15,6 @@ $content_and_sidebar_border_color: #504d44;
 
 $storke_top_img: url(%%storke-top-night%%);
 $storke_middle_img: url(%%storke-middle-fullbright%%);
+
+$item_visited_color: darken(gray, 0%);
+$item_unvisited_color: lighten(gray, 30%);

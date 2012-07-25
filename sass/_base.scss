@@ -245,12 +245,29 @@ body {
     padding: 5px 15px;
 }
 
+// Content Items
 .link {
     &:first-child {
         border-top: 0;
     }
     border-top: 1px solid lighten(gray, 40%);
     padding: 7px 0;
+}
+
+// Link State
+.thing {
+    .title {
+        // For non-logged in lusers or not users whatever.
+        &:visited, &.click {
+            color: $item_visited_color;
+        }
+        &.loggedin {
+            color: $item_unvisited_color;
+            &:visited, &.click, &.click:visited {
+                color: $item_visited_color;
+            }
+        }
+    }
 }
 
 // RES do not do dashed borders
