@@ -1,5 +1,7 @@
 @import "colors/ucsb";
 
+$day: false;
+
 $sky_color: darken(#87CEFA, 70%);
 
 $header_color: darken(#0062da,25%);
@@ -15,3 +17,9 @@ $content_and_sidebar_border_color: #504d44;
 
 $storke_top_img: url(%%storke-top-night%%);
 $storke_middle_img: url(%%storke-middle-fullbright%%);
+
+$item_visited_color: lighten(#6082B6, 10%);
+$item_unvisited_color: lighten(#6082B6, 30%);
+
+$user_link_color: lighten(#369, 10%);
+$plain_text_color: gray;
