@@ -129,9 +129,11 @@ $sidebar_width: 300px;
 }
 
 .side > .spacer:first-child {
-    padding-top: 280px;
-    background-position: 8px -48px;
+    padding-top: 320px;
+    background-position: 8px 240px;
     background-color: $sky-color;
+    background-image: $storke_middle_img;
+    background-repeat: no-repeat;
     margin: 0;
 }
 
@@ -195,12 +197,14 @@ $sidebox_border_width: 5px;
 
 // Tower
 .side a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
-    height: 300px;
-    width: 330px;
-    background-color: magenta;
+    height: 330px;
+    width: 300px;
+    background-color: transparent;
     position: absolute;
     z-index: 52;
-    top: 15px;
+    top: 28px;
+    right: 0;
+    background-image: $storke_top_img;
 }
 
 @mixin submit-button {
