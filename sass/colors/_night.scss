@@ -1,16 +1,17 @@
 @import "colors/ucsb";
 
 $day: false;
-
 $sky_color: darken(#3F3149, 15%);
 
-$header_color: darken(#0062da,25%);
+$header_background_color: darken(#0062da, 15%);
 
 $subreddit_bar_color: #2D2D2D;
 $subreddit_bar_seperator_color: gray;
 $subreddit_bar_link_color: #CCC;
 
 $userbar_color: $ucsb_blue;
+
+$sidebar_header_color: $header_background_color;
 
 $content_and_sidebar_background_color: white;
 $content_and_sidebar_border_color: #FFF8E7;

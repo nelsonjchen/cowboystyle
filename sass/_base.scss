@@ -79,7 +79,7 @@ a {
 // HEADER
 
 #header-bottom-left {
-    background-color: $header_color;
+    background-color: $header_background_color;
     background-image: $storke_top_img;
     background-repeat: repeat-y;
     background-position: 100% 0%;
@@ -202,7 +202,7 @@ $sidebox_border_width: 5px;
 }
 
 .titlebox .usertext .md > h1 {
-    background-color: $header_color;
+    background-color: $sidebar_header_color;
     color: white;
     margin-left: -18px;
     padding-left: 20px;
@@ -216,7 +216,7 @@ $sidebox_border_width: 5px;
 .titlebox .usertext .md > h1:after {
     display: block;
     content: "";
-    border-color: transparent darken($header_color, 10%) transparent transparent;
+    border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
     border-style: solid;
     border-width: 15px;
     height: 0px;
