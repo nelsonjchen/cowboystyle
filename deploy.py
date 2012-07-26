@@ -1,5 +1,5 @@
 import sys
-import reddit
+import praw
 import configparser
 import datetime
 import difflib
@@ -23,7 +23,7 @@ with open(filename, 'r') as file:
     style = file.read()
 
 print("Going to Reddit")
-r = reddit.Reddit(user_agent = USER_AGENT)
+r = praw.Reddit(user_agent = USER_AGENT)
 r.login(username, password)
 print("Logged in")
 sr = r.get_subreddit(subreddit)
