@@ -80,7 +80,6 @@ a {
 
 #header-bottom-left {
     background-color: $header_background_color;
-    background-image: $storke_top_img;
     background-repeat: repeat-y;
     background-position: 100% 0%;
 }
@@ -125,7 +124,6 @@ $sidebar_width: 300px;
 
 .side > .spacer:first-child {
     padding-top: 280px;
-    background-image: $storke_top_img;
     background-position: 8px -48px;
     background-color: $sky-color;
     margin: 0;
