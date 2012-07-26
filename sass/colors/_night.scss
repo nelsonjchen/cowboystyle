@@ -7,19 +7,19 @@ $sky_color: darken(#3F3149, 15%);
 $header_color: darken(#0062da,25%);
 
 $subreddit_bar_color: #2D2D2D;
-$subreddit_bar_seperator_color: darken(gray, 40%);
+$subreddit_bar_seperator_color: gray;
 $subreddit_bar_link_color: #CCC;
 
 $userbar_color: $ucsb_blue;
 
-$content_and_sidebar_background_color: black;
-$content_and_sidebar_border_color: darken(desaturate(#fff8e7, 90%), 70%);
+$content_and_sidebar_background_color: white;
+$content_and_sidebar_border_color: #FFF8E7;
 
 $storke_top_img: url(%%storke-top-night%%);
 $storke_middle_img: url(%%storke-middle-fullbright%%);
 
-$item_visited_color: darken(white, 15%);
-$item_unvisited_color: white;
+$item_visited_color: #551a8b;
+$item_unvisited_color: blue;
 
-$user_link_color: lighten(#369, 10%);
-$plain_text_color: lighten(gray, 25%);
+$user_link_color: #369;
+$plain_text_color: black;
