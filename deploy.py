@@ -13,6 +13,7 @@ username = config.get("user", "username")
 password = config.get("user", "password")
 subreddit = config.get("user", "subreddit")
 filename = config.get("user", "file")
+mkdnfilename = config.get("user", "mkdn")
 
 USER_AGENT = "subreddit css bot for reddit %s" % subreddit
 USER_AGENT = "uploading %s" % filename
@@ -22,7 +23,7 @@ print(USER_AGENT)
 with open(filename, 'r') as file:
     style = file.read()
 
-with open('sidebar.mkdn', 'r') as file:
+with open(mkdnfilename, 'r') as file:
     sidebar = file.read()
 
 print("Going to Reddit %s" % subreddit)
