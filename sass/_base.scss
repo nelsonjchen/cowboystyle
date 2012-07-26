@@ -80,13 +80,14 @@ a {
 
 #header-bottom-left {
     background-color: $header_background_color;
-    background-image: $storke_top_img;
     background-repeat: repeat-y;
     background-position: 100% 0%;
+    padding-right: 300px
 }
 
 #header {
     border-bottom: 0;
+    z-index: 45;
 }
 
 
@@ -112,6 +113,10 @@ a {
     color: $ucsb_blue;
 }
 
+.tabmenu {
+    z-index: 55;
+}
+
 
 // SIDEBAR
 
@@ -124,10 +129,11 @@ $sidebar_width: 300px;
 }
 
 .side > .spacer:first-child {
-    padding-top: 280px;
-    background-image: $storke_top_img;
-    background-position: 8px -48px;
+    padding-top: 320px;
+    background-position: 8px 240px;
     background-color: $sky-color;
+    background-image: $storke_middle_img;
+    background-repeat: no-repeat;
     margin: 0;
 }
 
@@ -187,6 +193,18 @@ $sidebox_border_width: 5px;
 
 .side a[href*="#selfpost"] {
     @include submit-link;
+}
+
+// Tower
+.side a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
+    height: 330px;
+    width: 300px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 52;
+    top: 28px;
+    right: 0;
+    background-image: $storke_top_img;
 }
 
 @mixin submit-button {
