@@ -255,6 +255,11 @@ $sidebox_border_width: 5px;
     overflow: visible;
 }
 
+// Fix login box
+.login-form-side {
+    background-color: white;
+}
+
 // CONTENT
 
 body {
