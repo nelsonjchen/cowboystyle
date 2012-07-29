@@ -16,9 +16,9 @@ filename = config.get("user", "file")
 mkdnfilename = config.get("user", "mkdn")
 
 USER_AGENT = "subreddit css bot for reddit %s" % subreddit
-USER_AGENT = "uploading %s" % filename
-
 print(USER_AGENT)
+
+print("uploading %s" % filename)
 
 with open(filename, 'r') as file:
     style = file.read()
