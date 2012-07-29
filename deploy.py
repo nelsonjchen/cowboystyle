@@ -15,7 +15,7 @@ subreddit = config.get("user", "subreddit")
 filename = config.get("user", "file")
 mkdnfilename = config.get("user", "mkdn")
 
-USER_AGENT = "subreddit css bot for reddit %s" % subreddit
+USER_AGENT = "subreddit css development bot for reddit %s" % subreddit
 print(USER_AGENT)
 
 print("uploading %s" % filename)
