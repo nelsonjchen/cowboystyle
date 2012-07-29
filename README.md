@@ -1,10 +1,6 @@
 # Cowboystyle
 
-This is a Proposed UCSB Reddit CSS theme and scheme generator framework and bot.
-
-It's in extremely early alpha and may change widly as I learn things.
-
-I don't have a plan so I'm just making this up as I go.
+This is the SCSS source and toolkit for the CSS used in r/UCSantabarbara.
 
 ## CSS
 
@@ -22,14 +18,6 @@ bottom.
 The sidebar is like the parking lot signs since the colors fit in just fine. 
 
 A script generates night versions.
-
-## Bot
-
-This bot switches between night and day versions. It calculates the altitude of
-the sun at the campus and switches to night once the sun is below horizon or to
-day once just below horizon. This shouldn't use any external services and
-should be pretty optional.
-
 
 ## Random Notes
 Modded Official logo from http://satedproductions.com/tmp/reddit/alien/
