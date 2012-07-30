@@ -79,17 +79,19 @@ Images that must be uploaded to the reddit before uploading CSS include:
     * Middle Day
 * Header Background
     * The Alien without the text but the same dimensions as the logo in
-      half DPI. (Not Done)
+      half DPI. This will have seperate night and day versions in the future.
+      The framework has been laid out for such already.
 
 _If these images are not uploaded, CSS uploading will fail!_
 
 One more image that doesn't need to be uploaded but is neverthreless important:
-    * A 144dpi image of the subreddit text. This image will be resquashed to
-      the proper dimensions. The reason for the high DPI is to ensure that it
-      looks good on Retina displays such as the ones on newer Macs, iPads, and
-      Android Tablets.
+    * A 144dpi image of the subreddit text at 280x80. This image will be
+      resquashed to the proper dimensions. The reason for the high DPI is to
+      ensure that it looks good on Retina-class displays such as the ones on
+      newer Macs, iPads, and Android Tablets.
 
 
 ## Random Notes
 Modded Official logo from http://satedproductions.com/tmp/reddit/alien/
+Upcoming UCSB alien logo from u/snifty.
 
