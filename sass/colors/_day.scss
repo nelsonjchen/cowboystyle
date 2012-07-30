@@ -4,6 +4,8 @@ $day: true;
 
 $sky_color: lighten(#87CEFA, 10%);
 
+$header_image_alien: url(%%alien-header-background-temp%%);
+
 $header_background_color: darken(#0062da,5%);
 
 $subreddit_bar_color: #2D2D2D;
@@ -25,3 +27,4 @@ $item_unvisited_color: blue;
 
 $user_link_color: #369;
 $plain_text_color: black;
+
