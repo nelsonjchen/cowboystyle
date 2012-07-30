@@ -1,9 +1,10 @@
 # Cowboystyle
 
-This is the SCSS source and toolkit for the CSS used in r/UCSantabarbara. This
-is only to be used within your own test subreddits by creating your own little
-configuration files and passing it as the second argument. For production
-deployment, [cowboybeepbot](https://github.com/crazysim/cowboybeepbot) is used.
+This is a proposed source and toolkit for the CSS and sidebar used in
+r/UCSantabarbara. This is only to be used within your own test subreddits by
+creating your own little configuration files and passing it as the second
+argument to `deploy.py`. For production deployment on an interval,
+[cowboybeepbot](https://github.com/crazysim/cowboybeepbot) is used.
 
 ## Git
 
@@ -84,14 +85,20 @@ Images that must be uploaded to the reddit before uploading CSS include:
 
 _If these images are not uploaded, CSS uploading will fail!_
 
-One more image that doesn't need to be uploaded but is neverthreless important:
+One more image that doesn't need to be uploaded but is nevertheless important:
     * A 144dpi image of the subreddit text at 280x80. This image will be
       resquashed to the proper dimensions. The reason for the high DPI is to
       ensure that it looks good on Retina-class displays such as the ones on
       newer Macs, iPads, and Android Tablets.
 
+## Sidebar
+
+`sidebar.markdown` is the source for the sidebar. Since the styling may rely on
+the ordering of certain elements in the sidebar, the sidebar is placed under
+version control as well.
 
 ## Random Notes
+
 Modded Official logo from http://satedproductions.com/tmp/reddit/alien/
-Upcoming UCSB alien logo from u/snifty.
+UCSB alien logo and variants from u/snifty.
 
