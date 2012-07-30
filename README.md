@@ -11,8 +11,7 @@ argument to `deploy.py`. For production deployment on an interval,
 This project is under `git`. It uses `git-flow` to manage releases and such. As
 such, development generally happens in the `develop` branch.
 
-No biggy if you can't follow the `git-flow` thing. Pull requests regardless of
-how git was used is appreciated.
+Pull requests are appreciated, even if you can't use the `git-flow`.
 
 ## CSS
 
