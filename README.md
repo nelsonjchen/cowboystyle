@@ -1,6 +1,7 @@
 # Cowboystyle
 
-We're trying to do Heroku with the same repository now.
+We're trying to do Heroku with the same repository now. This should reduce
+duplication.
 
 This is a proposed source and toolkit for the CSS and sidebar used in
 r/UCSantabarbara. This is only to be used within your own test subreddits by
