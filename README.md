@@ -1,5 +1,7 @@
 # Cowboystyle
 
+We're trying to do Heroku with the same repository now.
+
 This is a proposed source and toolkit for the CSS and sidebar used in
 r/UCSantabarbara. This is only to be used within your own test subreddits by
 creating your own little configuration files and passing it as the second
