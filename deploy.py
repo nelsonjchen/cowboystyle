@@ -1,19 +1,18 @@
 import sys
 import praw
-import configparser
 import datetime
 import difflib
 from pprint import pprint
 import hashlib
+import os
 
 print("Beginning uploading CSS to Subreddit")
-config = configparser.ConfigParser()
-config.read(sys.argv[1])
-username = config.get("user", "username")
-password = config.get("user", "password")
-subreddit = config.get("user", "subreddit")
-filename = config.get("user", "file")
-mkdnfilename = config.get("user", "mkdn")
+
+username = os.environ[ "REDDIT_USER" ]
+password = os.environ[ "REDDIT_PASSWORD" ]
+subreddit = os.environ[ "REDDIT_SUBREDDIT" ]
+filename = os.environ[ "REDDIT_STYLESHEET_FILENAME" ]
+mkdnfilename = os.environ[ "REDDIT_SIDEBAR_FILENAME" ]
 
 USER_AGENT = "subreddit css development bot for reddit %s" % subreddit
 print(USER_AGENT)
