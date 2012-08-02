@@ -11,8 +11,17 @@ print("Beginning uploading CSS to Subreddit")
 username = os.environ[ "REDDIT_USER" ]
 password = os.environ[ "REDDIT_PASSWORD" ]
 subreddit = os.environ[ "REDDIT_SUBREDDIT" ]
-filename = os.environ[ "REDDIT_STYLESHEET_FILENAME" ]
-mkdnfilename = os.environ[ "REDDIT_SIDEBAR_FILENAME" ]
+mode = os.environ[ "REDDIT_STYLESHEET_MODE" ]
+sidebar_filename = os.environ[ "REDDIT_SIDEBAR_FILENAME" ]
+
+if (mode == "day"):
+    filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
+elif (mode == "night"):
+    filename = os.environ[ "REDDIT_STYLESHEET_NIGHT_FILENAME" ]
+elif (mode == "auto"):
+    filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
+else:
+    filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
 
 USER_AGENT = "subreddit css development bot for reddit %s" % subreddit
 print(USER_AGENT)
@@ -22,7 +31,7 @@ print("uploading %s" % filename)
 with open(filename, 'r') as file:
     style = file.read()
 
-with open(mkdnfilename, 'r') as file:
+with open(sidebar_filename, 'r') as file:
     sidebar = file.read()
 
 print("Going to Reddit %s" % subreddit)
