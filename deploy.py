@@ -6,6 +6,7 @@ from pprint import pprint
 import hashlib
 import os
 import subprocess
+import astral
 
 print("Beginning uploading CSS to Subreddit")
 
