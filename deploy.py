@@ -39,7 +39,7 @@ if (compile_scss):
 USER_AGENT = "Subreddit SCSS Update Bot for /r/%s" % subreddit
 print(USER_AGENT)
 
-print("Uploading %s" % filename)
+print("Uploading %s to %s" % (filename, subreddit))
 
 with open(filename, 'r') as file:
     style = file.read()

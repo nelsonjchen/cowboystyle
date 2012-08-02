@@ -10,7 +10,7 @@ end
 #
 guard 'shell' do
     watch(%r{stylesheets/day\.css}) {
-        cmd = "rake " +
+        cmd = "foreman run rake " +
         "REDDIT_STYLESHEET_MODE=day " +
         "REDDIT_STYLESHEET_COMPILE=false " +
         "REDDIT_SUBREDDIT=crazysimreddittesttwo " +
@@ -18,7 +18,7 @@ guard 'shell' do
         `#{cmd}`
         }
     watch(%r{stylesheets/night\.css}) {
-        cmd = "rake " +
+        cmd = "foreman run rake " +
         "REDDIT_STYLESHEET_MODE=night " +
         "REDDIT_STYLESHEET_COMPILE=false " +
         "REDDIT_SUBREDDIT=crazysimreddittest3 " +
@@ -26,7 +26,7 @@ guard 'shell' do
         `#{cmd}`
         }
     watch(%r{stylesheets/*\.css}) {
-        cmd = "rake " +
+        cmd = "foreman run rake " +
         "REDDIT_STYLESHEET_MODE=auto " +
         "REDDIT_STYLESHEET_COMPILE=false " +
         "REDDIT_SUBREDDIT=crazysimreddittest " +
