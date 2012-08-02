@@ -9,7 +9,19 @@ end
 #   watch(%r{file/path}) { `command(s)` }
 #
 guard 'shell' do
-    watch(%r{stylesheets/day\.css}) {`rake deploy_day`}
-    watch(%r{stylesheets/night\.css}) {`rake deploy_night`}
+    watch(%r{stylesheets/day\.css}) {
+        cmd = "rake " +
+        "REDDIT_STYLESHEET_MODE=day " +
+        "REDDIT_STYLESHEET_COMPILE=false " +
+        "deploy"
+        `#{cmd}`
+        }
+    watch(%r{stylesheets/night\.css}) {
+        cmd = "rake " +
+        "REDDIT_STYLESHEET_MODE=night " +
+        "REDDIT_STYLESHEET_COMPILE=false " +
+        "deploy"
+        `#{cmd}`
+        }
 end
 
