@@ -7,6 +7,8 @@ import hashlib
 import os
 import subprocess
 import astral
+from jinja2 import Environment, PackageLoader, FileSystemLoader
+env = Environment(loader=FileSystemLoader( 'templates'))
 
 print("Beginning uploading CSS to Subreddit")
 
@@ -44,8 +46,7 @@ print("Uploading %s to %s" % (filename, subreddit))
 with open(filename, 'r') as file:
     style = file.read()
 
-with open(sidebar_filename, 'r') as file:
-    sidebar = file.read()
+sidebar = env.get_template(sidebar_filename).render()
 
 print("Going to Reddit %s" % subreddit)
 r = praw.Reddit(user_agent = USER_AGENT)
