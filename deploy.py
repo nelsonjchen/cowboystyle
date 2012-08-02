@@ -5,6 +5,7 @@ import difflib
 from pprint import pprint
 import hashlib
 import os
+import subprocess
 
 print("Beginning uploading CSS to Subreddit")
 
@@ -12,6 +13,7 @@ username = os.environ[ "REDDIT_USER" ]
 password = os.environ[ "REDDIT_PASSWORD" ]
 subreddit = os.environ[ "REDDIT_SUBREDDIT" ]
 mode = os.environ[ "REDDIT_STYLESHEET_MODE" ]
+compile_scss = bool(os.environ[ "REDDIT_STYLESHEET_COMPILE" ])
 sidebar_filename = os.environ[ "REDDIT_SIDEBAR_FILENAME" ]
 
 if (mode == "day"):
@@ -22,6 +24,9 @@ elif (mode == "auto"):
     filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
 else:
     filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
+
+if (compile_scss):
+    subprocess.call("compass compile", shell=True)
 
 USER_AGENT = "Subreddit SCSS Update Bot for /r/%s" % subreddit
 print(USER_AGENT)
