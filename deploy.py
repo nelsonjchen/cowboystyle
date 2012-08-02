@@ -31,7 +31,7 @@ if (compile_scss):
 USER_AGENT = "Subreddit SCSS Update Bot for /r/%s" % subreddit
 print(USER_AGENT)
 
-print("uploading %s" % filename)
+print("Uploading %s" % filename)
 
 with open(filename, 'r') as file:
     style = file.read()
@@ -42,19 +42,19 @@ with open(sidebar_filename, 'r') as file:
 print("Going to Reddit %s" % subreddit)
 r = praw.Reddit(user_agent = USER_AGENT)
 r.login(username, password)
-print("Logged in")
+print("Logged in as %s" % username)
 sr = r.get_subreddit(subreddit)
-print("Got subreddit")
-print("Setting sidebar markdown")
+print("Got Subreddit")
+print("Setting sidebar's markdown")
 sr.update_settings(description = sidebar)
-print("hashing style")
+print("Hashing Stylesheet")
 style_hash = hashlib.md5(style.encode('UTF-8'))
 style = style + "/*" + style_hash.hexdigest() + "*/"
-print("set style")
+print("Setting Stylesheet")
 sr.set_stylesheet(style)
 style_set = sr.get_stylesheet()['stylesheet']
 if (style_set.find(style_hash.hexdigest()) == -1):
-    print("Style that was uploaded was invalid. Manual mode")
+    print("Style that was uploaded was invalid. Upload manually for errors")
     d = difflib.Differ()
     result = list(d.compare(style_set.splitlines(1),style.splitlines(1)))
     pprint(result)
