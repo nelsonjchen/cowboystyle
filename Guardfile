@@ -13,6 +13,7 @@ guard 'shell' do
         cmd = "rake " +
         "REDDIT_STYLESHEET_MODE=day " +
         "REDDIT_STYLESHEET_COMPILE=false " +
+        "REDDIT_SUBREDDIT=crazysimreddittesttwo " +
         "deploy"
         `#{cmd}`
         }
@@ -20,6 +21,15 @@ guard 'shell' do
         cmd = "rake " +
         "REDDIT_STYLESHEET_MODE=night " +
         "REDDIT_STYLESHEET_COMPILE=false " +
+        "REDDIT_SUBREDDIT=crazysimreddittest3 " +
+        "deploy"
+        `#{cmd}`
+        }
+    watch(%r{stylesheets/*\.css}) {
+        cmd = "rake " +
+        "REDDIT_STYLESHEET_MODE=auto " +
+        "REDDIT_STYLESHEET_COMPILE=false " +
+        "REDDIT_SUBREDDIT=crazysimreddittest " +
         "deploy"
         `#{cmd}`
         }
