@@ -23,7 +23,7 @@ elif (mode == "auto"):
 else:
     filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
 
-USER_AGENT = "subreddit css development bot for reddit %s" % subreddit
+USER_AGENT = "Subreddit SCSS Update Bot for /r/%s" % subreddit
 print(USER_AGENT)
 
 print("uploading %s" % filename)
