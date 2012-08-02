@@ -22,7 +22,14 @@ if (mode == "day"):
 elif (mode == "night"):
     filename = os.environ[ "REDDIT_STYLESHEET_NIGHT_FILENAME" ]
 elif (mode == "auto"):
-    filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
+    ucsb = astral.City(('University of California, Santa Barbara Main Campus',
+        'USA', 34.41254, -119.84813, 'US/Pacific'))
+    if (ucsb.solar_elevation() > 0):
+        print("AUTO: Day")
+        filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
+    else:
+        print("AUTO: Night")
+        filename = os.environ[ "REDDIT_STYLESHEET_NIGHT_FILENAME" ]
 else:
     filename = os.environ[ "REDDIT_STYLESHEET_DAY_FILENAME" ]
 
