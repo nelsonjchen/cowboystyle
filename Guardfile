@@ -10,28 +10,31 @@ end
 #
 guard 'shell' do
     watch(%r{stylesheets/day\.css}) {
+        puts "Updating Day Reddit"
         cmd = "foreman run rake " +
         "REDDIT_STYLESHEET_MODE=day " +
         "REDDIT_STYLESHEET_COMPILE=false " +
-        "REDDIT_SUBREDDIT=crazysimreddittesttwo " +
-        "deploy"
+        "REDDIT_SUBREDDIT=" + ENV['REDDIT_SUBREDDIT_DEV_DAY'] +
+        " deploy"
         `#{cmd}`
         }
     watch(%r{stylesheets/night\.css}) {
+        puts "Updating Night Reddit"
         cmd = "foreman run rake " +
         "REDDIT_STYLESHEET_MODE=night " +
         "REDDIT_STYLESHEET_COMPILE=false " +
-        "REDDIT_SUBREDDIT=crazysimreddittest3 " +
-        "deploy"
+        "REDDIT_SUBREDDIT=" + ENV['REDDIT_SUBREDDIT_DEV_NIGHT'] +
+        " deploy"
         `#{cmd}`
         }
-    watch(%r{stylesheets/*\.css}) {
-        cmd = "foreman run rake " +
-        "REDDIT_STYLESHEET_MODE=auto " +
-        "REDDIT_STYLESHEET_COMPILE=false " +
-        "REDDIT_SUBREDDIT=crazysimreddittest " +
-        "deploy"
-        `#{cmd}`
-        }
+    # watch(%r{stylesheets/(day|night)\.css}) {
+        # puts "Updating Temporal Reddit"
+        # cmd = "foreman run rake " +
+        # "REDDIT_STYLESHEET_MODE=auto " +
+        # "REDDIT_STYLESHEET_COMPILE=false " +
+        # "REDDIT_SUBREDDIT=" + ENV['REDDIT_SUBREDDIT_DEV_TEMPORAL'] +
+        # " deploy"
+        # `#{cmd}`
+        # }
 end
 
