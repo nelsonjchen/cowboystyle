@@ -154,7 +154,8 @@ as follows:
     deployment stage on Heroku but it is not worth the headaches.
 * `REDDIT_SIDEBAR_FILENAME` is the filename of the sidebar file relative to the
   templates folder.
-* `REDDIT_SUBREDDIT_DEV_*` are development subreddits.
+* `REDDIT_SUBREDDIT_DEV_*` are development subreddits. This is mostly used by
+  `rake` to change the `REDDIT_SUBREDDIT` that is passed to `deploy.py`.
   * `TEMPORAL` is uploaded depending on solar elevation. It is meant to be used
     by looking out the window if you're on or near campus and then back at the
     screen.
