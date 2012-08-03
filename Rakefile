@@ -1,10 +1,5 @@
-task :deploy_day do
-  sh "python deploy.py day.config"
-end
-
-task :deploy_night do
-  # puts "night!!"
-  sh "python deploy.py night.config"
+task :deploy do
+  sh "python deploy.py"
 end
 
 task :compass do

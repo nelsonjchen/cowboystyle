@@ -1,1 +1,6 @@
-praw>=1.0.1
+Jinja2==2.6
+astral==0.6.1
+praw==1.0.3
+pytz==2012d
+six==1.1.0
+wsgiref==0.1.2
