@@ -34,19 +34,58 @@ notice:
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
 
-## Development Concept
+## Development
 
 Since there isn't a Ruby on Rails analogue to subreddit styling and sidebar
-markdown development for deployment on Heroku, use of some tools and homegrown
-scripts were made.  They're definitely not the most polished and will probably
-be specific to r/UCSantaBarbara for some time. These scripts will allow
-development of the subreddit's style on test subreddits without affecting the
-production subreddit.
+markdown development for deployment on Heroku, adaptation of some tools and
+homegrown scripts were made.  They're definitely not the most polished and will
+probably be specific to r/UCSantaBarbara for some time. These scripts will
+allow development of the subreddit's style and content on multiple test
+subreddits without affecting the production subreddit.  Finally, a large amount
+of time was spent to make this project hostable on Heroku for free with very
+minimal maintainence.
+
+### QuickStart
+
+This might not work for everyone but it's a rough guide to getting your system
+up and going with Ruby and Python from a fresh. Apologies, it isn't much of
+a quickstart but it's the fastest way I can come up with.
+
+1. Install Git
+2. Clone this repository
+3. Install Heroku Tools
+4. Ensure GCC or Clang is installed.
+5. Install Virtualenv-burrito
+6. Install Pythonz
+7. Install Python 2.7.2 through Pythonz
+8. Create a virtualenv with the python 2.7.2 binary from Pythonz. Yes, the
+   binary is going to be inside the .pythonz dotfolder.
+9. Install Rbenv
+10. Install Ruby-build
+11. Install Ruby 1.9.3 through ruby-build
+12. Switch to ruby 1.9.3 through rbenv
+13. `cd` to the git repository and run `bundle install`
+14. `workon` the virtualenv you created earlier
+15. `pip install -r requirements.txt`
+
+If you open a new shell, you'll need to repeat step 12 and 14 before running
+anything otherwise the dependencies will not resolve.
+
+You must also prepare three subreddits for testing and development : night,
+day, and temporal. *You must upload all required images beforehand or otherwise
+the CSS uploading will fail.*
+
+### Tools
 
 Ruby tools include:
 * Guard for monitoring changes to source files and involing rake tasks
 * Rake for task specification
-* Compass is used to compile the SCSS files to CSS files
+  * Upload to all the test subreddits at once for development and previewing
+    purposes.
+* Compass is used to compile the SCSS files to CSS files so we can maintain two
+  CSS files and their little differences from the same codebase. We also get
+  free SCSS goodies like darken, lighten, mixins, inheritance, and other
+  freebies.
 
 Python tools include:
 * deploy.py to handle deployment upon enviromental variables
@@ -54,92 +93,92 @@ Python tools include:
     files.
 
 Recommended tools to install for development include:
+* Some form of Linux or OS X. Development may work with Cygwin but support
+  won't be guaranteed.
+* Git for version control. The code and content is versioned so if something
+  goes wrong we can rollback. It also allows for use of sites like GitHub or
+  Bitbucket where people can do pull requests against the styling or markdown.
 * RVM or rbenv/ruby-build, each with bundler, for running Ruby 1.9.3
 * Some form of Virtualenv/pythonz to run virtualenv with Python 2.7.2
-* Heroku tools for `foreman` load up `.env` files with private login details
-  for easy configuration. It is highly recommended that Heroku tools be
-  installed even if you are not deploying to Heroku just for the foreman
+* Heroku tools for `foreman` which loads up `.env` files with private login
+  details for easy configuration. It is highly recommended that Heroku tools be
+  installed even if you are not deploying to Heroku just for the `foreman`
   utility.
 
-## Code
+For more information on each tool, see the next sections.
 
-Languages used in this project include Ruby, Python, SCSS, Markdown, and
-Jinja2. 
-
-Python is used to interact with Reddit and compile the markdown while Ruby is
-used for SCSS compilation and development utilities.
-
-## State of the Project
-
-Unfortunately, the Ruby parts are not very clean and the Python parts are
-absolutely not Pythonic. It's a start and a good proof of concept though. It
-could be put into production at this moment, pending documentation and
-approval. However, massive refactoring, particularly in the Python code should
-be done before attempts at adding more features are added.
-
-
-## Git
+### Git
 
 This project places the SCSS and Sidebar Markdown under `git`. It uses
 `git-flow` to manage releases and such. As such, development generally happens
 in the `develop` branch. Whatever is in the `master` branch is what goes on
-Heroku for the periodically updating CSS.
+Heroku for the periodically updating the CSS.
 
-Even if you don't follow `git-flow`, pull requests are much appreciated.
+Even if you don't follow `git-flow`, pull requests are much appreciated. If you
+pull request against the `develop` branch, that will be even better.
 
-## Heroku
+### Heroku/Foreman/Configuration
 
 This framework is designed to be used with heroku. You should be prefixing
 commands with `foreman run` with a valid `.env` in order to set proper
-enviromental variables.
+enviromental variables. `.env` files are ignored by git and will not be shared
+so private information such as passwords or keys can be placed into there.
+A sample `.env` file is below. Put this `.env` file at the root of the git
+repository. 
 
-## CSS
+    REDDIT_USER=crazysim
+    REDDIT_PASSWORD=notmyrealpassword
+    REDDIT_SUBREDDIT=crazysimreddittest
+    REDDIT_STYLESHEET_DAY_FILENAME=stylesheets/day.css
+    REDDIT_STYLESHEET_NIGHT_FILENAME=stylesheets/night.css
+    REDDIT_STYLESHEET_MODE=auto
+    REDDIT_STYLESHEET_COMPILE=true
+    REDDIT_SIDEBAR_FILENAME=sidebar.mkdn
+    REDDIT_SUBREDDIT_DEV_TEMPORAL=crazysimreddittest
+    REDDIT_SUBREDDIT_DEV_DAY=crazysimreddittesttwo
+    REDDIT_SUBREDDIT_DEV_NIGHT=crazysimreddittest3
 
-Compilation of this will require a modern ruby and python development setup.
-Use `bundler` to install the requirements. Ensure that whatever ruby version
-manager you use, use something that is 1.9.3. For Python, it is recommended
-that a virtualenv setup be used. The version you should select while creating
-the virtualenv for this project should be Python 2.7.x. Install the package
-requirements with `pip -r`. 
+Most of these options are self explanatory. The ones that are not are described
+as follows:
 
-CSS is is generally generated by Compass. Files in the `sass` folder are
-compiled and the resulting CSS files are put into the `styleheets` folder.
+* `REDDIT_SUBREDDIT` is the target subreddit that deploy.rb will deploy to.
+* `REDDIT_STYLESHEET_MODE` has three options
+  * `day` will upload the day CSS
+  * `night` will upload the night CSS
+  * `auto` will calculate the solar elevation of the sun at Storke Tower and
+    upload the appropiate CSS
+* `REDDIT_STYLESHEET_COMPILE` determines if `deploy.py` will invoke `compass
+  compile`
+  * This is required for Heroku as CSS files are generated from only files in
+    the `git` repository. More work could be done to precompile in the
+    deployment stage on Heroku but it is not worth the headaches.
+* `REDDIT_SIDEBAR_FILENAME` is the filename of the sidebar file relative to the
+  templates folder.
+* `REDDIT_SUBREDDIT_DEV_*` are development subreddits.
+  * `TEMPORAL` is uploaded depending on solar elevation. It is meant to be used
+    by looking out the window if you're on or near campus and then back at the
+    screen.
+  * `NIGHT` is the subreddit that is to be uploaded the night stylesheet.
+  * `DAY` is the subreddit that is to be uploaded the day stylesheet.
 
-You can upload the css files into the test subreddits by editing their
-stylesheets manually and pasting in the content from the generated files. This
-is stupid and error prone to do constantly so don't do that too often.
+*Remember to have images uploaded onto the test subreddits beforehand!*
 
-Instead, do this because having near instant feedback on whatever you are doing
-is extremely valuable:
+It is assumed that you have moderator privledges on all subreddits mentioned in
+the `.env` file.
 
-1. Create two test subreddits and ensure that you have moderator privledges.
-   Ensure that the images have been uploaded to both reddits.  See the images
-   section for more details on what images must have been uploaded. If the
-   images aren't present, the upload will fail.
+## SCSS Compass
 
-2. Run `compass compile` to compile the SCSS to CSS.
+CSS is is generated by Compass. Files in the `sass` folder are compiled and the
+resulting CSS files are put into the `stylesheets` folder.  everytime deploy.rb
+is run with `REDDIT_STYLESHEET_COMPILE=true`, `compass compile` or by the
+`guard-compass` plugin in `guard`. 
 
-2. Create a `day.config` and `night.config` file with a template similar to
-   this:
+You may upload the css files into the test subreddits by editing their
+stylesheets manually and pasting in the content from the generated files.
+Currently, this is the only way to retrieve real error messages for CSS files.
+A rudimentary hack to diff the existing CSS file with the new one is provided
+if the stylesheet fails to upload for whatever reason.
 
-    [user]
-    username=aredditusername
-    password=lol_password
-    subreddit=crazysimreddittest
-    file=stylesheets/day.css
-    mkdn=markdown/sidebar.mkdn
-
-3. Within the project directory, run `python deploy day.config` and `python
-   deploy night.config`. Pay attention to the output for any errors.
-
-4. Make sure that the CSS is uploaded. If it isn't you'll see a hacky diff of
-   the current CSS and the uploaded CSS. To obtain the actual error message,
-   you must upload manually as the current Python API does not respond with
-   errors.  Sometimes, it errors out anyway so if your change was very minor or
-   there's no way your change can cause that, upload again to make sure.
-
-5. At this point, you have verified that uploading manually works. To compile
-   and upload automatically, run `guard`.
 
 ## Images
 
@@ -186,6 +225,14 @@ to use:
     REDDIT_SUBREDDIT_DEV_TEMPORAL=crazysimreddittest
     REDDIT_SUBREDDIT_DEV_DAY=crazysimreddittesttwo
     REDDIT_SUBREDDIT_DEV_NIGHT=crazysimreddittest3
+
+## ToDo
+
+Unfortunately, the Ruby parts are not very clean and the Python parts are
+absolutely not Pythonic. It's a start and a good proof of concept though. It
+could be put into production at this moment, pending documentation and
+approval. However, massive refactoring, particularly in the Python code should
+be done before attempts at adding more features are added.
 
 ## Random Notes
 
