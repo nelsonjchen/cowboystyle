@@ -3,7 +3,8 @@
 
 [Submit a Text Post](//reddit.com/r/{{subreddit}}/submit?selftext=true#selfpost) 
 
-If this wasn't obvious, we are not officially affiliated with the university.
+If this wasn't obvious, this subreddit is not officially affiliated with the
+university.
 
 # Welcome!
 
@@ -13,9 +14,9 @@ If this wasn't obvious, we are not officially affiliated with the university.
 
 # Upcoming Events
 
-Milk Drinking Contest
+## Next r/UCSantaBarbara Meetup
 
-Diaper Changing Race
+TBA
 
 # UCSB/Close Communities
 
@@ -44,6 +45,12 @@ Diaper Changing Race
 * [California Reddits] (http://www.reddit.com/help/faqs/california)
 * [College Reddits] (http://www.reddit.com/help/faqs/college)
 
+# Get back to work and/or pay attention
+
+* [GauchoSpace] (http://gauchospace.ucsb.edu)
+* [GOLD] (https://my.sa.ucsb.edu/gold/login.aspx)
+* [Logout of UCSB Wireless Web] (http://127.0.0.1/logout.html)
+
 {# This is the clock tower image that the CSS takes advantage of. It's a link
-to a video of the tower.#}
+to a video of the tower. Without this link, the tower will not show!#}
 [ ] (http://www.youtube.com/watch?v=JPPjS-TCCqk)
