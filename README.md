@@ -186,9 +186,10 @@ You may upload these css files into the test subreddits by editing their
 stylesheets manually and pasting in the content from the generated files.
 Currently, this is the only way to retrieve real error messages for CSS files.
 A rudimentary hack to diff the existing CSS file with the new one is provided
-if the stylesheet fails to upload for whatever reason.
+if the stylesheet fails to upload for whatever reason. An issue has been filed
+upstream with the reddit library used to fix this.
 
-On reddit, the CSS validation and filter source file is in
+On reddit, the canonical CSS validation and filter source file is in
 [cssfilter.py](https://github.com/reddit/reddit/blob/master/r2/r2/lib/cssfilter.py).
 The most common CSS keywords are allowed through that whitelist though cutting
 edge keywords like animation or uncommon background-position arguments are not.
@@ -225,18 +226,29 @@ One more image that should be uploaded but is not required:
       newer Macs, iPads, Android Tablets, Windows 8 UI, and other HiDPI
       displays.
 
-## Sidebar
+Images for this subreddit were created with Pixen for the tower,
+Illustrator/Inkscape for the alien.
 
-`sidebar.markdown` is the source for the sidebar. Since the styling may rely on
+The APNG version of the tower is compiled with `apng2asm` which is probably not
+in your distribution's repositories. You will most likely have to download this
+from their sourceforge site.
+
+### Sidebar
+
+`sidebar.md` is the source for the sidebar. Since the styling may rely on
 the ordering of certain elements in the sidebar, the sidebar is placed under
-version control as well. `sidebar.markdown` is currently run through Jinja2 and
+version control as well. `sidebar.md` is currently run through Jinja2 and
 may incorporate more variables and features in the future.
 
 ## Guard
 
-A Guardfile has been provided. Run `foreman run guard` to automatically compile
-the SCSS and upload to tests reddits set by enviromental variables. Currently,
-it monitors the CSS files and `sidebar.markdown`.
+A Guardfile has been provided. Run `foreman run guard` to automatically monitor
+and compile compile the SCSS and upload to test subreddits set by enviromental
+variables. Currently, it monitors the CSS files for upload to the
+`REDDIT_SUBREDDIT_DEV_NIGHT` and `REDDIT_SUBREDDIT_DEV_DAY` subreddits and
+`sidebar.markdown` for upload to `REDDIT_SUBREDDIT_DEV_NIGHT`,
+`REDDIT_SUBREDDIT_DEV_DAY`, and `REDDIT_SUBREDDIT_DEV_TEMPORAL` subreddits
+simultanously.
 
 ## To do and future plans
 
