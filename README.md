@@ -239,7 +239,12 @@ from their sourceforge site.
 `sidebar.md` is the source for the sidebar. Since the styling may rely on
 the ordering of certain elements in the sidebar, the sidebar is placed under
 version control as well. `sidebar.md` is currently run through Jinja2 and
-may incorporate more variables and features in the future.
+may incorporate more variables and features in the future. At the moment, only
+the subreddit name is exposed to the template. 
+
+Note that as a Jinja2 template, comments can be put into the file. Like
+Compass, Jinja2 templates may import files. That functionality may be utilized
+in the future.
 
 ## Guard
 
