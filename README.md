@@ -1,15 +1,63 @@
 # Cowboystyle
 
-This is a proposed framework and tool for the CSS and sidebar used in
-r/UCSantabarbara. Parts of it are written in Ruby and parts of it are Python. 
+Cowboystyle is a proposed set of tools for maintaining the CSS and Sidebar used
+in r/UCSantaBarbara.  
 
- 
+## Concepts
+
+Here are the visual and usability goals of the project:
+
+* Storke Tower is prominently on the right.
+  * It is drawn isometrically in pixel art to emphasize it's overall shape
+    and color.
+  * The tower extends all the way to the bottom.
+  * The top of the tower peeks up beyond the subreddit's body like scraping
+    the sky.
+  * It's a great place to hide an easter egg.
+* Strong UCSB colors are used in the header.
+* The look of the subreddit changes depending on if the sun is above or
+  below the horizon.
+  * Colors are adjusted to show that it is night on campus.
+  * Images that make up storke tower are swapped for night versions.
+  * Users with browsers that support APNG will have a blinking Storke Tower
+    that is just like the real thing!  
+* Header Reddit Logo text is Retina-display browser friendly.
+* Sidebar styling is updated to something a bit more modern.
+* Content submit links have been modified to be more prominent.
+* Reddit Enhancement Suite elements are taken into consideration for users of
+  those extensions to ensure their continued functionality.
+
+Current Demo Reddits:
+
+* [Temporal](http://www.reddit.com/r/crazysimreddittest)
+* [Perma-Day](http://www.reddit.com/r/crazysimreddittesttwo)
+* [Perma-Night](http://www.reddit.com/r/crazysimreddittest3)
+
+## Code
+
+Languages used in this project include Ruby, Python, SCSS, Markdown, and
+Jinja2. 
+
+Python is used to interact with Reddit and compile the markdown while Ruby is
+used for SCSS compilation and development utilities.
+
+## State of the Project
+
+Unfortunately, the Ruby parts are not very clean and the Python parts are
+absolutely not Pythonic. It's a start and a good proof of concept though. It
+could be put into production at this moment, pending documentation and
+approval. However, massive refactoring, particularly in the Python code should
+be done before attempts at adding more features are added.
+
+
 ## Git
 
-This project is under `git`. It uses `git-flow` to manage releases and such. As
-such, development generally happens in the `develop` branch.
+This project places the SCSS and Sidebar Markdown under `git`. It uses
+`git-flow` to manage releases and such. As such, development generally happens
+in the `develop` branch. Whatever is in the `master` branch is what goes on
+Heroku for the periodically updating CSS.
 
-Pull requests are appreciated, even if you can't use the `git-flow`.
+Even if you don't follow `git-flow`, pull requests are much appreciated.
 
 ## Heroku
 
