@@ -16,8 +16,8 @@ username = os.environ[ "REDDIT_USER" ]
 password = os.environ[ "REDDIT_PASSWORD" ]
 subreddit = os.environ[ "REDDIT_SUBREDDIT" ]
 mode = os.environ[ "REDDIT_STYLESHEET_MODE" ]
-compile_scss = bool(os.environ[ "REDDIT_STYLESHEET_COMPILE" ])
-manage_sidebar = bool(os.environ[ "REDDIT_SIDEBAR_MANAGE" ])
+compile_scss = os.environ[ "REDDIT_STYLESHEET_COMPILE" ] == 'true'
+manage_sidebar = os.environ[ "REDDIT_SIDEBAR_MANAGE" ] == 'true'
 sidebar_filename = os.environ[ "REDDIT_SIDEBAR_FILENAME" ]
 
 if (mode == "day"):
