@@ -143,6 +143,7 @@ root of the git repository.
     REDDIT_STYLESHEET_NIGHT_FILENAME=stylesheets/night.css
     REDDIT_STYLESHEET_MODE=auto
     REDDIT_STYLESHEET_COMPILE=true
+    REDDIT_SIDEBAR_MANAGE=true
     REDDIT_SIDEBAR_FILENAME=sidebar.mkdn
     REDDIT_SUBREDDIT_DEV_TEMPORAL=crazysimreddittest
     REDDIT_SUBREDDIT_DEV_DAY=crazysimreddittesttwo
@@ -162,6 +163,11 @@ as follows:
   * This is required for Heroku as CSS files are generated from only files in
     the `git` repository. More work could be done to precompile in the
     deployment stage on Heroku but it is not worth the headaches.
+* `REDDIT_MANAGE_SIDEBAR` determines if the deployment script compiles the
+  sidebar's markdown from a template and uploads it. This option may be
+  disabled if the moderators of the production reddit want to edit the sidebar
+  by hand and they do not want to go through the hassle of pushing the master
+  branch to Heroku and all that madness.
 * `REDDIT_SIDEBAR_FILENAME` is the filename of the sidebar file relative to the
   templates folder.
 * `REDDIT_SUBREDDIT_DEV_*` are development subreddits. This is mostly used by
@@ -263,6 +269,10 @@ Note that as a Jinja2 template, comments can be put into the file. Like
 Compass, Jinja2 templates may import files. That functionality may be utilized
 in the future.
 
+Currently this option is only used during development because it effectively
+mandates that any more changes to the sidebar require going through this Git
+repository and pushing changes to Heroku. 
+
 ## Guard
 
 A Guardfile has been provided. Run `foreman run guard` to automatically monitor
@@ -281,8 +291,8 @@ could be put into production at this moment, pending documentation and
 approval. However, massive refactoring, particularly in the Python code should
 be done before attempts at adding more ambitious features are added.
 
-Also, the SCSS could do with a cleanup. It's a patchwork that hopefully SCSS
-features can help with.
+Also, the SCSS could do with a cleanup. It's a patchwork that hopefully use of
+more SCSS features can help with.
 
 ## Random Notes
 

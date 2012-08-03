@@ -16,7 +16,8 @@ username = os.environ[ "REDDIT_USER" ]
 password = os.environ[ "REDDIT_PASSWORD" ]
 subreddit = os.environ[ "REDDIT_SUBREDDIT" ]
 mode = os.environ[ "REDDIT_STYLESHEET_MODE" ]
-compile_scss = bool(os.environ[ "REDDIT_STYLESHEET_COMPILE" ])
+compile_scss = os.environ[ "REDDIT_STYLESHEET_COMPILE" ] == 'true'
+manage_sidebar = os.environ[ "REDDIT_SIDEBAR_MANAGE" ] == 'true'
 sidebar_filename = os.environ[ "REDDIT_SIDEBAR_FILENAME" ]
 
 if (mode == "day"):
@@ -46,8 +47,6 @@ print("Uploading %s to %s" % (filename, subreddit))
 with open(filename, 'r') as file:
     style = file.read()
 
-print("Rendering sidebar markdown")
-sidebar = env.get_template(sidebar_filename).render(subreddit=subreddit)
 
 print("Going to Reddit %s" % subreddit)
 r = praw.Reddit(user_agent = USER_AGENT)
@@ -56,8 +55,11 @@ print("Logged in as %s" % username)
 sr = r.get_subreddit(subreddit)
 print("Got Subreddit %s" % subreddit)
 
-print("Setting sidebar's markdown")
-sr.update_settings(description = sidebar)
+if (manage_sidebar):
+    print("Rendering sidebar markdown")
+    sidebar = env.get_template(sidebar_filename).render(subreddit=subreddit)
+    print("Setting sidebar's markdown")
+    sr.update_settings(description = sidebar)
 
 print("Hashing Stylesheet")
 style_hash = hashlib.md5(style.encode('UTF-8'))
