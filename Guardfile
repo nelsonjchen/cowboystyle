@@ -19,7 +19,6 @@ guard 'shell' do
             update_day_reddit()
             update_night_reddit()
         }
-    }
     # watch(%r{stylesheets/(day|night)\.css}) {
         # puts "Updating Temporal Reddit"
         # cmd = "foreman run rake " +
