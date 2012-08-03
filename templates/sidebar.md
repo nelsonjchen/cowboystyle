@@ -45,12 +45,6 @@ TBA
 * [California Reddits] (http://www.reddit.com/help/faqs/california)
 * [College Reddits] (http://www.reddit.com/help/faqs/college)
 
-# Get back to work and/or pay attention
-
-* [GauchoSpace] (http://gauchospace.ucsb.edu)
-* [GOLD] (https://my.sa.ucsb.edu/gold/login.aspx)
-* [Logout of UCSB Wireless Web] (http://127.0.0.1/logout.html)
-
 {# This is the clock tower image that the CSS takes advantage of. It's a link
 to a video of the tower. Without this link, the tower will not show!#}
 [ ] (http://www.youtube.com/watch?v=JPPjS-TCCqk)
