@@ -15,7 +15,7 @@ guard 'shell' do
     watch(%r{stylesheets/night\.css}) {
             `rake deploy:night`
         }
-    watch(%r{templates/sidebar\.mkdn}) {
+    watch(%r{templates/sidebar\.md}) {
             `rake deploy:all`
         }
 end
