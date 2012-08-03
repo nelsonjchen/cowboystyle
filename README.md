@@ -37,7 +37,7 @@ notice:
 ## Development
 
 Since there isn't a Ruby on Rails analogue to subreddit styling and sidebar
-markdown development for deployment on Heroku, adaptation of some tools and
+markdown development for deployment on Heroku, adaptation of existing tools and
 homegrown scripts were made.  They're definitely not the most polished and will
 probably be specific to r/UCSantaBarbara for some time. These scripts will
 allow development of the subreddit's style and content on multiple test
