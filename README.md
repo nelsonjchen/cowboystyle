@@ -34,6 +34,16 @@ notice:
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
 
+### Concepts to be still investigated
+
+* Apple Calendar like icon for events with dates.
+* Pretty Buttons for links on the side.
+
+### Concepts that will be investigated pending technical overhaul
+
+* Subset of r/UCSB4Sale in Sidebar
+* Art for page footer
+
 ## Development
 
 Since there isn't a Ruby on Rails analogue to subreddit styling and sidebar
@@ -270,6 +280,9 @@ absolutely not Pythonic. It's a start and a good proof of concept though. It
 could be put into production at this moment, pending documentation and
 approval. However, massive refactoring, particularly in the Python code should
 be done before attempts at adding more ambitious features are added.
+
+Also, the SCSS could do with a cleanup. It's a patchwork that hopefully SCSS
+features can help with.
 
 ## Random Notes
 
