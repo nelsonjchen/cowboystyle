@@ -9,7 +9,7 @@ Current Demo/Development Reddits:
 * [Perma-Day](http://www.reddit.com/r/crazysimreddittesttwo)
 * [Perma-Night](http://www.reddit.com/r/crazysimreddittest3)
 
-## Concepts
+## Concept
 
 Here are the visual and usability goals of the project that a viewer will
 notice:
@@ -33,6 +33,8 @@ notice:
 * Content submit links have been modified to be more prominent.
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
+
+## Development Concept
 
 Since there isn't a Ruby on Rails analogue to subreddit styling and sidebar
 markdown development for deployment on Heroku, use of some tools and homegrown
