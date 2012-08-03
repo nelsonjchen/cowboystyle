@@ -154,7 +154,8 @@ as follows:
     deployment stage on Heroku but it is not worth the headaches.
 * `REDDIT_SIDEBAR_FILENAME` is the filename of the sidebar file relative to the
   templates folder.
-* `REDDIT_SUBREDDIT_DEV_*` are development subreddits.
+* `REDDIT_SUBREDDIT_DEV_*` are development subreddits. This is mostly used by
+  `rake` to change the `REDDIT_SUBREDDIT` that is passed to `deploy.py`.
   * `TEMPORAL` is uploaded depending on solar elevation. It is meant to be used
     by looking out the window if you're on or near campus and then back at the
     screen.
@@ -238,7 +239,12 @@ from their sourceforge site.
 `sidebar.md` is the source for the sidebar. Since the styling may rely on
 the ordering of certain elements in the sidebar, the sidebar is placed under
 version control as well. `sidebar.md` is currently run through Jinja2 and
-may incorporate more variables and features in the future.
+may incorporate more variables and features in the future. At the moment, only
+the subreddit name is exposed to the template. 
+
+Note that as a Jinja2 template, comments can be put into the file. Like
+Compass, Jinja2 templates may import files. That functionality may be utilized
+in the future.
 
 ## Guard
 

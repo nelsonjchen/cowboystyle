@@ -3,33 +3,54 @@
 
 [Submit a Text Post](//reddit.com/r/{{subreddit}}/submit?selftext=true#selfpost) 
 
-If this wasn't obvious, we are not officially affiliated with the university.
+If this wasn't obvious, this subreddit is not officially affiliated with the
+university.
 
-# Welcome
+# Welcome!
 
-* [Frequently Asked Questions](http://www.google.com)
+* [Frequently Asked Questions](http://www.reddit.com/r/ucsantabarbara/faq)
 * [/r/UCSB4Sale] (/r/UCSB4Sale)
+* [Follow us on Twitter!] (http://twitter.com/reddit_ucsb)
 
-# Other UCSB/Close Communities
+# Upcoming Events
 
-* [IRC Channel] (http://goo.gl/LY0bz)
-* [UCSB Facebook] (http://www.facebook.com/ucsantabarbara)
+## Next r/UCSantaBarbara Meetup
+
+TBA
+
+# UCSB/Close Communities
+
+* [#shrub@Rizon IRC Channel] (http://goo.gl/LY0bz)
 * [/r/SantaBarbara] (/r/SantaBarbara)
 
-# Local News
+# UCSB News
 
-* Some news site!
+* [The Daily Nexus] (http://www.dailynexus.com)
+* [The Bottom Line] (http://thebottomline.as.ucsb.edu)
+* [UCSB Facebook] (http://www.facebook.com/ucsantabarbara)
 
-# Nearby Communities
+# UC Communities
 
-* some nearby subreddits
+* [r/berkeley] (http://www.reddit.com/r/berkeley)
+* [r/ucla] (http://www.reddit.com/r/ucla)
+* [r/ucsd] (http://www.reddit.com/r/ucsd)
+* [r/ucdavis] (http://www.reddit.com/r/ucsd)
+* [r/ucr] (http://www.reddit.com/r/ucr)
+* [r/uci] (http://www.reddit.com/r/ucr)
+* [r/ucmerced] (http://www.reddit.com/r/ucr)
+* [r/ucsc] (http://www.reddit.com/r/ucr)
 
 # Other Community Lists
 
-* links
-* DeVry University Data Systems
-* the streets yo
+* [California Reddits] (http://www.reddit.com/help/faqs/california)
+* [College Reddits] (http://www.reddit.com/help/faqs/college)
+
+# Get back to work and/or pay attention
+
+* [GauchoSpace] (http://gauchospace.ucsb.edu)
+* [GOLD] (https://my.sa.ucsb.edu/gold/login.aspx)
+* [Logout of UCSB Wireless Web] (http://127.0.0.1/logout.html)
 
 {# This is the clock tower image that the CSS takes advantage of. It's a link
-to a video of the tower.#}
+to a video of the tower. Without this link, the tower will not show!#}
 [ ] (http://www.youtube.com/watch?v=JPPjS-TCCqk)
