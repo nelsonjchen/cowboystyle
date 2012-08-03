@@ -1,6 +1,7 @@
-[Submit a Link](//reddit.com/r/crazysimreddittest/submit#submitlink)
+{# These links are for replacing the submit links.#}
+[Submit a Link](//reddit.com/r/{{subreddit}}/submit#submitlink)
 
-[Submit a Text Post](//reddit.com/r/crazysimreddittest/submit?selftext=true#selfpost) 
+[Submit a Text Post](//reddit.com/r/{{subreddit}}/submit?selftext=true#selfpost) 
 
 If this wasn't obvious, we are not officially affiliated with the university.
 
@@ -28,4 +29,6 @@ If this wasn't obvious, we are not officially affiliated with the university.
 * DeVry University Data Systems
 * the streets yo
 
+{# This is the clock tower image that the CSS takes advantage of. It's a link
+to a video of the tower.#}
 [ ] (http://www.youtube.com/watch?v=JPPjS-TCCqk)
