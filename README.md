@@ -1,7 +1,7 @@
 # Cowboystyle
 
-Cowboystyle is a proposed set of tools for the CSS and Sidebar used
-in r/UCSantaBarbara.  
+Cowboystyle is a proposed stylesheet and set of tools for the stylesheet and
+sidebar used in [r/UCSantaBarbara](http://www.reddit.com/r/ucsantabarbara).  
 
 Current Maintainer's Demo/Development Reddits:
 
@@ -238,7 +238,7 @@ A Guardfile has been provided. Run `foreman run guard` to automatically compile
 the SCSS and upload to tests reddits set by enviromental variables. Currently,
 it monitors the CSS files and `sidebar.markdown`.
 
-## To Do and Future plans
+## To do and future plans
 
 Unfortunately, the Ruby parts are not very clean and the Python parts are
 absolutely not Pythonic. It's a start and a good proof of concept though. It
