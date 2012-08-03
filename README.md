@@ -232,7 +232,7 @@ the ordering of certain elements in the sidebar, the sidebar is placed under
 version control as well. `sidebar.markdown` is currently run through Jinja2 and
 may incorporate more variables and features in the future.
 
-## Guard (Ruby)
+## Guard
 
 A Guardfile has been provided. Run `foreman run guard` to automatically compile
 the SCSS and upload to tests reddits set by enviromental variables. Currently,
