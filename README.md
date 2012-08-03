@@ -119,12 +119,12 @@ pull request against the `develop` branch, that will be even better.
 
 ### Heroku/Foreman/Configuration
 
-This framework is designed to be used with heroku. You should be prefixing
-commands with `foreman run` with a valid `.env` in order to set proper
-enviromental variables. `.env` files are ignored by git and will not be shared
-so private information such as passwords or keys can be placed into there.
-A sample `.env` file is below. Put this `.env` file at the root of the git
-repository. 
+This toolkit was adapted to be used with [Heroku](http://heroku.com). You
+should be prefixing commands with `foreman run` with a valid `.env` in order to
+set proper enviromental variables. `.env` files are ignored by git and will not
+be shared so private and local information such as passwords or keys can be
+placed into there.  A sample `.env` file is below. Put this `.env` file at the
+root of the git repository. 
 
     REDDIT_USER=crazysim
     REDDIT_PASSWORD=notmyrealpassword
@@ -163,7 +163,7 @@ as follows:
 
 *Remember to have images uploaded onto the test subreddits beforehand!*
 
-It is assumed that you have moderator privledges on all subreddits mentioned in
+It is assumed that you have moderator privileges on all subreddits mentioned in
 the `.env` file.
 
 ## SCSS Compass
@@ -173,21 +173,32 @@ resulting CSS files are put into the `stylesheets` folder.  everytime deploy.rb
 is run with `REDDIT_STYLESHEET_COMPILE=true`, `compass compile` or by the
 `guard-compass` plugin in `guard`. 
 
-You may upload the css files into the test subreddits by editing their
+During compilation, `day.css` and `night.css` are generated inside the
+stylesheets folder. Most of their common code is in the `_base.scss` file. Use
+of SCSS @imports are done to import colors and different image urls from the `colors`
+folder for placement in `day.css` and `night.css`.
+
+You may upload these css files into the test subreddits by editing their
 stylesheets manually and pasting in the content from the generated files.
 Currently, this is the only way to retrieve real error messages for CSS files.
 A rudimentary hack to diff the existing CSS file with the new one is provided
 if the stylesheet fails to upload for whatever reason.
 
+On reddit, the CSS validation and filter source file is in
+[cssfilter.py](https://github.com/reddit/reddit/blob/master/r2/r2/lib/cssfilter.py).
+The most common CSS keywords are allowed through that whitelist though cutting
+edge keywords like animation or uncommon background-position arguments are not.
 
 ## Images
 
 Images must be manually uploaded until the python API allows image uploading.
-Only finalized versions are to be put in the images folder. Development of
+Only finalized versions are to be put in the `images` folder. Development of
 these images happen in a [Dropbox
-folder](https://www.dropbox.com/sh/i3qo9cgdgen1bcf/oNpFhT8gF0).
+folder](https://www.dropbox.com/sh/i3qo9cgdgen1bcf/oNpFhT8gF0). There is one
+requirement for submitting images for use in this subreddit and that is you
+must include the source. The source will be placed into that Dropbox folder.
 
-Images that must be uploaded to the reddit before uploading CSS include:
+Images that must be uploaded to the subreddit before uploading CSS include:
 
 * Storke Tower
     * Top Night
@@ -203,39 +214,37 @@ Images that must be uploaded to the reddit before uploading CSS include:
 
 _If these images are not uploaded, CSS uploading will fail!_
 
-One more image that doesn't need to be uploaded but is nevertheless important:
+One more image that should be uploaded but is not required:
     * A 144dpi image of the subreddit text at 280x80. This image will be
       resquashed to the proper dimensions. The reason for the high DPI is to
       ensure that it looks good on Retina-class displays such as the ones on
-      newer Macs, iPads, and Android Tablets.
+      newer Macs, iPads, Android Tablets, Windows 8 UI, and other HiDPI
+      displays.
 
 ## Sidebar
 
 `sidebar.markdown` is the source for the sidebar. Since the styling may rely on
 the ordering of certain elements in the sidebar, the sidebar is placed under
-version control as well.
+version control as well. `sidebar.markdown` is currently run through Jinja2 and
+may incorporate more variables and features in the future.
 
 ## Guard (Ruby)
 
 A Guardfile has been provided. Run `foreman run guard` to automatically compile
-the SCSS and upload to tests reddits set by enviromental variables. It uses the
-following enviromental variables which you should set in `.env` for `foreman`
-to use:
+the SCSS and upload to tests reddits set by enviromental variables. Currently,
+it monitors the CSS files and `sidebar.markdown`.
 
-    REDDIT_SUBREDDIT_DEV_TEMPORAL=crazysimreddittest
-    REDDIT_SUBREDDIT_DEV_DAY=crazysimreddittesttwo
-    REDDIT_SUBREDDIT_DEV_NIGHT=crazysimreddittest3
-
-## ToDo
+## ToDo and Future plans
 
 Unfortunately, the Ruby parts are not very clean and the Python parts are
 absolutely not Pythonic. It's a start and a good proof of concept though. It
 could be put into production at this moment, pending documentation and
 approval. However, massive refactoring, particularly in the Python code should
-be done before attempts at adding more features are added.
+be done before attempts at adding more ambitious features are added.
 
 ## Random Notes
 
 Modded Official logo from http://satedproductions.com/tmp/reddit/alien/
 UCSB alien logo and variants from u/snifty.
+Initial version of toolkit and Tower by u/crazysim
 
