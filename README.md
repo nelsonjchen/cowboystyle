@@ -34,6 +34,16 @@ notice:
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
 
+### Concepts to be still investigated
+
+* Apple Calendar like icon for events with dates.
+* Pretty Buttons for links on the side.
+
+### Concepts that will be investigated pending technical overhaul
+
+* Subset of r/UCSB4Sale in Sidebar
+* Art for page footer
+
 ## Development
 
 Since there isn't a Ruby on Rails analogue to subreddit styling and sidebar
@@ -133,6 +143,7 @@ root of the git repository.
     REDDIT_STYLESHEET_NIGHT_FILENAME=stylesheets/night.css
     REDDIT_STYLESHEET_MODE=auto
     REDDIT_STYLESHEET_COMPILE=true
+    REDDIT_SIDEBAR_MANAGE=true
     REDDIT_SIDEBAR_FILENAME=sidebar.mkdn
     REDDIT_SUBREDDIT_DEV_TEMPORAL=crazysimreddittest
     REDDIT_SUBREDDIT_DEV_DAY=crazysimreddittesttwo
@@ -152,6 +163,11 @@ as follows:
   * This is required for Heroku as CSS files are generated from only files in
     the `git` repository. More work could be done to precompile in the
     deployment stage on Heroku but it is not worth the headaches.
+* `REDDIT_MANAGE_SIDEBAR` determines if the deployment script compiles the
+  sidebar's markdown from a template and uploads it. This option may be
+  disabled if the moderators of the production reddit want to edit the sidebar
+  by hand and they do not want to go through the hassle of pushing the master
+  branch to Heroku and all that madness.
 * `REDDIT_SIDEBAR_FILENAME` is the filename of the sidebar file relative to the
   templates folder.
 * `REDDIT_SUBREDDIT_DEV_*` are development subreddits. This is mostly used by
@@ -170,6 +186,13 @@ the `.env` file.
 On Heroku, this is the git repository that is meant to be uploaded. There will
 be no peristantly running dynos. The only addon used is the Scheduler addon
 which should run `rake deploy:deploy` every ten minutes.
+
+This project also uses a buildpack that allows compositions of buildpacks. The
+specific buildpack used is slightly modified to start the project with
+a composed `$PATH` variable instead of having the last buildpack overwrite the
+variable. This lightly modified variant can be found at
+on GitHub at crazysim/heroku-buildpack-multi . This may not be needed in the
+future but it is needed for now.
 
 ## SCSS Compass
 
@@ -246,6 +269,10 @@ Note that as a Jinja2 template, comments can be put into the file. Like
 Compass, Jinja2 templates may import files. That functionality may be utilized
 in the future.
 
+Currently this option is only used during development because it effectively
+mandates that any more changes to the sidebar require going through this Git
+repository and pushing changes to Heroku. 
+
 ## Guard
 
 A Guardfile has been provided. Run `foreman run guard` to automatically monitor
@@ -263,6 +290,9 @@ absolutely not Pythonic. It's a start and a good proof of concept though. It
 could be put into production at this moment, pending documentation and
 approval. However, massive refactoring, particularly in the Python code should
 be done before attempts at adding more ambitious features are added.
+
+Also, the SCSS could do with a cleanup. It's a patchwork that hopefully use of
+more SCSS features can help with.
 
 ## Random Notes
 
