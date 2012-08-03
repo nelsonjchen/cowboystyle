@@ -11,7 +11,8 @@ Current Demo/Development Reddits:
 
 ## Concepts
 
-Here are the visual and usability goals of the project:
+Here are the visual and usability goals of the project that a viewer will
+notice:
 
 * Storke Tower is prominently on the right.
   * It is drawn isometrically in pixel art to emphasize it's overall shape
@@ -33,6 +34,30 @@ Here are the visual and usability goals of the project:
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
 
+Since there isn't a Ruby on Rails analogue to subreddit styling and sidebar
+markdown development for deployment on Heroku, use of some tools and homegrown
+scripts were made.  They're definitely not the most polished and will probably
+be specific to r/UCSantaBarbara for some time. These scripts will allow
+development of the subreddit's style on test subreddits without affecting the
+production subreddit.
+
+Ruby tools include:
+* Guard for monitoring changes to source files and involing rake tasks
+* Rake for task specification
+* Compass is used to compile the SCSS files to CSS files
+
+Python tools include:
+* deploy.py to handle deployment upon enviromental variables
+  * Jinja2 is used in deploy.py to do variable subsitution in the markdown
+    files.
+
+Recommended tools to install for development include:
+* RVM or rbenv/ruby-build, each with bundler, for running Ruby 1.9.3
+* Some form of Virtualenv/pythonz to run virtualenv with Python 2.7.2
+* Heroku tools for `foreman` load up `.env` files with private login details
+  for easy configuration. It is highly recommended that Heroku tools be
+  installed even if you are not deploying to Heroku just for the foreman
+  utility.
 
 ## Code
 
