@@ -3,6 +3,12 @@
 Cowboystyle is a proposed set of tools for maintaining the CSS and Sidebar used
 in r/UCSantaBarbara.  
 
+Current Demo/Development Reddits:
+
+* [Temporal](http://www.reddit.com/r/crazysimreddittest)
+* [Perma-Day](http://www.reddit.com/r/crazysimreddittesttwo)
+* [Perma-Night](http://www.reddit.com/r/crazysimreddittest3)
+
 ## Concepts
 
 Here are the visual and usability goals of the project:
@@ -27,11 +33,6 @@ Here are the visual and usability goals of the project:
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
 
-Current Demo Reddits:
-
-* [Temporal](http://www.reddit.com/r/crazysimreddittest)
-* [Perma-Day](http://www.reddit.com/r/crazysimreddittesttwo)
-* [Perma-Night](http://www.reddit.com/r/crazysimreddittest3)
 
 ## Code
 
