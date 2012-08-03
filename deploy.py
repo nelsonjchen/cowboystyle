@@ -46,7 +46,8 @@ print("Uploading %s to %s" % (filename, subreddit))
 with open(filename, 'r') as file:
     style = file.read()
 
-sidebar = env.get_template(sidebar_filename).render()
+print("Rendering sidebar markdown")
+sidebar = env.get_template(sidebar_filename).render(subreddit=subreddit)
 
 print("Going to Reddit %s" % subreddit)
 r = praw.Reddit(user_agent = USER_AGENT)
@@ -54,14 +55,19 @@ r.login(username, password)
 print("Logged in as %s" % username)
 sr = r.get_subreddit(subreddit)
 print("Got Subreddit %s" % subreddit)
+
 print("Setting sidebar's markdown")
 sr.update_settings(description = sidebar)
+
 print("Hashing Stylesheet")
 style_hash = hashlib.md5(style.encode('UTF-8'))
 style = style + "/*" + style_hash.hexdigest() + "*/"
+
 print("Setting Stylesheet")
 sr.set_stylesheet(style)
 style_set = sr.get_stylesheet()['stylesheet']
+
+print("Checking Stylesheet")
 if (style_set.find(style_hash.hexdigest()) == -1):
     print("Style that was uploaded was invalid. Upload manually for errors")
     d = difflib.Differ()
