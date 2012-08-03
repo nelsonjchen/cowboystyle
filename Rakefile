@@ -26,6 +26,8 @@ namespace :deploy do
     sh cmd
   end
 
+  multitask :all => [:temporal, :day, :night]
+
   task :deploy do
     sh "python deploy.py"
   end
