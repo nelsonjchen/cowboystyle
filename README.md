@@ -3,7 +3,7 @@
 Cowboystyle is a proposed set of tools for maintaining the CSS and Sidebar used
 in r/UCSantaBarbara.  
 
-Current Demo/Development Reddits:
+Current Maintainer's Demo/Development Reddits:
 
 * [Temporal](http://www.reddit.com/r/crazysimreddittest)
 * [Perma-Day](http://www.reddit.com/r/crazysimreddittesttwo)
