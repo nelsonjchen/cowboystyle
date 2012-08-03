@@ -1,6 +1,6 @@
 # Cowboystyle
 
-Cowboystyle is a proposed set of tools for maintaining the CSS and Sidebar used
+Cowboystyle is a proposed set of tools for the CSS and Sidebar used
 in r/UCSantaBarbara.  
 
 Current Maintainer's Demo/Development Reddits:
@@ -165,6 +165,10 @@ as follows:
 
 It is assumed that you have moderator privileges on all subreddits mentioned in
 the `.env` file.
+
+On Heroku, this is the git repository that is meant to be uploaded. There will
+be no peristantly running dynos. The only addon used is the Scheduler addon
+which should run `rake deploy:deploy` every ten minutes.
 
 ## SCSS Compass
 
