@@ -27,6 +27,7 @@ namespace :deploy do
   end
 
   multitask :all => [:temporal, :day, :night]
+  multitask :test => [:day, :night]
 
   task :deploy do
     sh "python deploy.py"
