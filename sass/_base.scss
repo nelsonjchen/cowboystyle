@@ -274,9 +274,9 @@ body {
 .content {
     margin-left: 8px;
     margin-right: 330px;
-    @include border-radius(5px);
+    /* @include border-radius(5px); */
     background-color: $content_and_sidebar_background_color;
-    border: 5px solid $content_and_sidebar_border_color;
+    /* border: 5px solid $content_and_sidebar_border_color; */
     padding: 5px 15px;
 }
 
