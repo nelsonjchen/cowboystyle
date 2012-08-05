@@ -1,4 +1,4 @@
-{# These links are for replacing the submit links.#}
+{# These links are for replacing the submit links which are hidden by CSS#}
 [Submit a Link](//reddit.com/r/{{subreddit}}/submit#submitlink)
 
 [Submit a Text Post](//reddit.com/r/{{subreddit}}/submit?selftext=true#selfpost) 
