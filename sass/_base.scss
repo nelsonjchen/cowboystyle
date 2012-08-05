@@ -130,11 +130,14 @@ a {
 $sidebar_width: 300px;
 
 
-// Hide name
+// Hide redundant subreddit name. The tower and the text on the top left should
+// be enough to identify this reddit as /r/UCSantaBarbara
 .titlebox > .redditname {
     display: none;
 }
 
+// Make space for the tower image element. The background is sky colored to
+// cover up the repeating element in the background.
 .side > .spacer:first-child {
     padding-top: 320px;
     background-position: 8px 250px;
@@ -144,19 +147,22 @@ $sidebar_width: 300px;
     margin: 0;
 }
 
-.side > .spacer:nth-child(2) {
+// Storke tower top image from link. 
+// Make an empty link to Greg Courville's arrangement of Still Alive and stick
+// it into the sidebar markdown. Otherwise, it will not appear.
+.side a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
+    height: 331px;
+    width: 300px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 52;
+    top: 28px;
+    right: 0;
+    background-image: $storke_top_img;
 }
 
 .titlebox form.toggle, .leavemoderator {
     background-color: $content_and_sidebar_background_color;
-}
-
-$sidebox_border_width: 5px;
-
-@mixin roundbox {
-    padding: 11 - $sidebox_border_width;
-    border: $sidebox_border_width solid $content_and_sidebar_border_color;
-    @include border-radius(5px);
 }
 
 .side {
@@ -166,7 +172,8 @@ $sidebox_border_width: 5px;
 }
 
 .titlebox, #moderation_tools, .sidecontentbox {
-    @include roundbox;
+    @include border-radius(5px);
+    padding: 10px;
     background-color: $content_and_sidebar_background_color;
 }
 
@@ -201,17 +208,6 @@ $sidebox_border_width: 5px;
     @include submit-link;
 }
 
-// Tower
-.side a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
-    height: 331px;
-    width: 300px;
-    background-color: transparent;
-    position: absolute;
-    z-index: 52;
-    top: 28px;
-    right: 0;
-    background-image: $storke_top_img;
-}
 
 @mixin submit-button {
     margin: 20px 0;
