@@ -185,6 +185,11 @@ $sidebar_width: 300px;
 }
 
 .titlebox .usertext .md {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+
+    // Big buttons for sideboxes
     a[href$="#submitlink"], a[href$="#selfpost"] {
         @include border-radius(5px);
         background-color: $ucsb_blue;
@@ -205,39 +210,34 @@ $sidebar_width: 300px;
      p:first-child, p:nth-child(2){
         margin: 20px 0;
      }
+
+     // Pretty h1 wrapper elements that are bars
+     > h1 {
+         background-color: $sidebar_header_color;
+         color: white;
+         margin-left: -18px;
+         padding-left: 20px;
+         margin-right: -18px;
+         padding-right: 20px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         // Witchcraft for the little wraparound illusion on the H1 elements
+         &:after {
+             display: block;
+             content: "";
+             border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
+             border-style: solid;
+             border-width: 15px;
+             height: 0px;
+             width: 0px;
+             position: absolute;
+             z-index: -1;
+             margin-left: -35px;
+             margin-top: -10px
+         }
+     }
 }
 
-.titlebox .usertext .md > h1 {
-    background-color: $sidebar_header_color;
-    color: white;
-    margin-left: -18px;
-    padding-left: 20px;
-    margin-right: -18px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-// Witchcraft for the little wraparound on the H1 elements
-.titlebox .usertext .md > h1:after {
-    display: block;
-    content: "";
-    border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
-    border-style: solid;
-    border-width: 15px;
-    height: 0px;
-    width: 0px;
-    position: absolute;
-    z-index: -1;
-    margin-left: -35px;
-    margin-top: -10px
-}
-
-.titlebox .usertext .md {
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-}
 
 // Fix login box
 .login-form-side {
