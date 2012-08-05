@@ -191,12 +191,11 @@ $sidebox_border_width: 5px;
     }
 }
 
-.side a[href*="#submitlink"] {
+.side a[href$="#submitlink"] {
     @include submit-link;
-    /* padding: 5px 52px; */
 }
 
-.side a[href*="#selfpost"] {
+.side a[href$="#selfpost"] {
     @include submit-link;
 }
 
