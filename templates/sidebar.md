@@ -3,47 +3,44 @@
 
 [Submit a Text Post](//reddit.com/r/{{subreddit}}/submit?selftext=true#selfpost) 
 
-If this wasn't obvious, this subreddit is not officially affiliated with the
-university.
+Follow us on [Twitter](http://twitter.com/reddit_ucsb) to get near real-time updates of new submissions.
 
-# Welcome!
+### Local News
 
-* [Frequently Asked Questions](http://www.reddit.com/r/ucsantabarbara/faq)
-* [/r/UCSB4Sale] (/r/UCSB4Sale)
-* [Follow us on Twitter!] (http://twitter.com/reddit_ucsb)
+||||
+:--:|:--:|:--:
+[Bottom Line](http://thebottomline.as.ucsb.edu/)|[Daily Nexus](http://www.dailynexus.com/)|[Edhat](http://www.edhat.com/site/tidbit.cfm?id=1394)
+[Independent](http://www.independent.com/)|[Noozhawk](http://www.noozhawk.com/)|[UCSB Facebook](https://www.facebook.com/ucsantabarbara)
 
-# Upcoming Events
+### Nearby Communities
 
-## Next r/UCSantaBarbara Meetup
+|||
+:--:|:--:
+/r/UCSB4Sale|/r/santabarbara
+/r/venturacounty|/r/ventura
+/r/camarillo|/r/csuci
+/r/slo|/r/calpoly
 
-TBA
+### UC Communities
 
-# UCSB/Close Communities
+||||
+:--:|:--:|:--:
+/r/berkeley|/r/ucla|/r/ucsd
+/r/ucdavis|/r/ucsc|/r/uci
+/r/ucr|/r/ucmerced||
 
-* [#shrub@Rizon IRC Channel] (http://goo.gl/LY0bz)
-* [/r/SantaBarbara] (/r/SantaBarbara)
 
-# UCSB News
+### Other Community Lists
 
-* [The Daily Nexus] (http://www.dailynexus.com)
-* [The Bottom Line] (http://thebottomline.as.ucsb.edu)
-* [UCSB Facebook] (http://www.facebook.com/ucsantabarbara)
+|||
+:--:|:--:
+[California Reddits](/help/faqs/california)|[College Reddits](/help/faqs/college)
 
-# UC Communities
+### More Info
 
-* [r/berkeley] (http://www.reddit.com/r/berkeley)
-* [r/ucla] (http://www.reddit.com/r/ucla)
-* [r/ucsd] (http://www.reddit.com/r/ucsd)
-* [r/ucdavis] (http://www.reddit.com/r/ucsd)
-* [r/ucr] (http://www.reddit.com/r/ucr)
-* [r/uci] (http://www.reddit.com/r/ucr)
-* [r/ucmerced] (http://www.reddit.com/r/ucr)
-* [r/ucsc] (http://www.reddit.com/r/ucr)
+For exciting tips about using this subreddit and a compilation of links to useful older threads that answer your deepest questions, check out the [FAQ and suggestions](/r/ucsantabarbara/faq) - it even tells you how to get flair next to your username.
 
-# Other Community Lists
-
-* [California Reddits] (http://www.reddit.com/help/faqs/california)
-* [College Reddits] (http://www.reddit.com/help/faqs/college)
+If this wasn't obvious, we are not officially affiliated with the university.
 
 {# This is the clock tower image that the CSS takes advantage of. It's a link
 to a video of the tower. Without this link, the tower will not show!#}
