@@ -262,6 +262,13 @@ body {
     padding: 5px 15px;
     // Link State
     .thing {
+        border-top: 1px solid lighten(gray, 40%);
+        padding: 7px 0;
+
+        &:first-child {
+            border-top: 0;
+        }
+
         .title {
             // For non-logged in lusers or not users whatever.
             color: $item_unvisited_color;
@@ -275,6 +282,7 @@ body {
                 }
             }
         }
+
         // This is the little link to a user's profile underneath the entry link
         .tagline a {
             // user link color
@@ -286,13 +294,6 @@ body {
             outline-width: 0;
             border-right: 1px solid blue;
         }
-    }
-    .link {
-        &:first-child {
-            border-top: 0;
-        }
-        border-top: 1px solid lighten(gray, 40%);
-        padding: 7px 0;
     }
 }
 
