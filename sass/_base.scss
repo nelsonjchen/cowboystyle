@@ -1,4 +1,4 @@
-// Globalish
+// GLOBAL
 
 a {
     color: $user_link_color;
@@ -59,7 +59,7 @@ a {
     background-color: darken($userbar_color, 10%) !important;
     border-right-color: darken($userbar_color, 15%) !important;
     color: $ucsb_gold !important;
-    min-height: 27px; // HotFix till they really fix this.
+    min-height: 27px; // HotFix till RES Developers fix this.
 }
 
 // Normal Variant
@@ -76,6 +76,7 @@ a {
     }
 }
 
+// Make room for tower on right on more space constrained screens.
 .width-clip {
     right: 300px !important;
 }
@@ -103,6 +104,7 @@ a {
 
 // Serif lettering based off of /r/gentlemanboners
 .pagename, .pagename a {
+    // Minion Pro is the recommended UCSB typeface.
     font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
                   Palatino, georgia, garamond, FreeSerif, serif;
     font-size: 16px;
