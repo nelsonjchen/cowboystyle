@@ -177,48 +177,34 @@ $sidebar_width: 300px;
     background-color: $content_and_sidebar_background_color;
 }
 
-// We'll be using the userbox to do submitting stuff.
+// We'll be using the userbox and our own buttons to do submitting.
+
+// Hide sidebox
 .sidebox.create, .sidebox.submit  {
     display: none;
 }
 
-@mixin submit-link {
-    @include border-radius(5px);
-    background-color: $ucsb_blue;
-    color: white;
-    padding: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    float: left;
-    width: 250px;
-    text-align: center;
-    margin: 5px;
-    /* text-shadow: 2px 2px 3px black; */
-    &:hover {
-        color: red;
-    }
-}
-
-.side a[href$="#submitlink"] {
-    @include submit-link;
-}
-
-.side a[href$="#selfpost"] {
-    @include submit-link;
-}
-
-
-@mixin submit-button {
-    margin: 20px 0;
-}
-
-.md p:first-child {
-    @include submit-button;
-}
-
-.md p:nth-child(2) {
-    @include submit-button;
+.titlebox .usertext .md {
+    a[href$="#submitlink"], a[href$="#selfpost"] {
+        @include border-radius(5px);
+        background-color: $ucsb_blue;
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        float: left;
+        width: 250px;
+        text-align: center;
+        margin: 5px;
+        /* text-shadow: 2px 2px 3px black; */
+        &:hover {
+            color: red;
+        } 
+     }
+     p:first-child, p:nth-child(2){
+        margin: 20px 0;
+     }
 }
 
 .titlebox .usertext .md > h1 {
