@@ -16,7 +16,7 @@ guard 'shell' do
             `rake deploy:night`
         }
     watch(%r{templates/sidebar\.md}) {
-            `rake deploy:all`
+            `rake deploy:test`
         }
 end
 
