@@ -228,6 +228,10 @@ a {
                 margin-top: -10px
             }
         }
+
+        thead {
+            background-color: $ucsb_blue;
+        }
     }
 
     .titlebox, #moderation_tools, .sidecontentbox {
