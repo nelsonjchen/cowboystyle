@@ -124,13 +124,12 @@ a {
 
 // This Yellows the tabs
 
-.tabmenu li a {
-    background-color: $ucsb_gold;
-    color: $ucsb_blue;
-}
-
 .tabmenu {
     z-index: 55;
+    li a {
+        background-color: $ucsb_gold;
+        color: $ucsb_blue;
+    }
 }
 
 
