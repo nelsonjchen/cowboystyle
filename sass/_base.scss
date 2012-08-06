@@ -82,7 +82,8 @@ a {
     right: 300px !important;
 }
 
-// HEADER
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #header-bottom-left {
     background-color: $header_background_color;
@@ -188,31 +189,27 @@ a {
             @include border-radius(5px);
             background-color: $ucsb_blue;
             color: white;
-            padding: 5px;
+            padding: 5px 0px;
             font-size: 20px;
             font-weight: bold;
             position: relative;
             float: left;
-            width: 250px;
+            width: 100%;
             text-align: center;
-            margin: 5px;
+            margin: 5px 0px;
             /* text-shadow: 2px 2px 3px black; */
             &:hover {
-                color: red;
+                color: $ucsb_gold;
             } 
         }
 
-        p:first-child, p:nth-child(2){
-            margin: 20px 0;
-        }
-
         // Pretty h1 wrapper elements that are bars
-        > h1 {
+        > h1, > h3 {
             background-color: $sidebar_header_color;
             color: white;
             margin-left: -18px;
             padding-left: 20px;
-            margin-right: -18px;
+            margin-right: 5px;
             padding-right: 20px;
             padding-top: 5px;
             padding-bottom: 5px;
@@ -231,6 +228,10 @@ a {
                 margin-top: -10px
             }
         }
+
+        thead {
+            background-color: $ucsb_blue;
+        }
     }
 
     .titlebox, #moderation_tools, .sidecontentbox {
@@ -242,6 +243,18 @@ a {
     // Fix login box
     .login-form-side {
         background-color: white;
+    }
+
+    // Account Activity box is outside oddly so let's respect that. 
+    .account-activity-box a {
+        background-color: white;
+        @include border-radius(2px);
+        padding: 2px 10px;
+    }
+
+    // Remove duplicate border
+    .sidecontentbox .content{
+        border:none;
     }
 }
 
@@ -255,11 +268,12 @@ body {
     background-position: 100% 70px;
     color: $plain_text_color;
     .content {
+        margin-top: 8px;
         margin-left: 8px;
         margin-right: 330px;
         @include border-radius(5px);
         background-color: $content_and_sidebar_background_color;
-        padding: 5px 15px;
+        padding: 10px;
         // Link State
         .thing {
             border-top: 1px solid lighten(gray, 40%);
