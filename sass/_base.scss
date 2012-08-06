@@ -262,7 +262,7 @@ body {
         margin-right: 330px;
         @include border-radius(5px);
         background-color: $content_and_sidebar_background_color;
-        padding: 5px 15px;
+        padding: 10px;
         // Link State
         .thing {
             border-top: 1px solid lighten(gray, 40%);
