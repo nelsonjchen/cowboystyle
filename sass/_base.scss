@@ -239,6 +239,13 @@ a {
     .login-form-side {
         background-color: white;
     }
+
+    // Account Activity box is outside oddly so let's respect that. 
+    .account-activity-box a {
+        background-color: white;
+        @include border-radius(2px);
+        padding: 2px;
+    }
 }
 
 
