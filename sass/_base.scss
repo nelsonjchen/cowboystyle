@@ -132,7 +132,7 @@ a {
             color: $ucsb_blue;
         }
         &.selected a {
-            background-color: lighten($sky_color, 10%);
+            background-color: lighten($sky_color, 20%);
             border: 1px solid $header_content_border_color;
             border-bottom-color: lighten($sky_color, 10%);
         }
