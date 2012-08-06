@@ -1,23 +1,31 @@
-// Globalish
+/* ~~~~~~~~~~~~~~~~~~~~~~ Global ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@mixin reddit-linear-gradient($direction, $from_color, $to_color){
+    background-image: -webkit-linear-gradient($direction, $from_color, $to_color);
+    background-image: -moz-linear-gradient($direction, $from_color, $to_color);
+    background-image: -o-linear-gradient($direction, $from_color, $to_color);
+    background-image: linear-gradient($direction, $from_color, $to_color);
+}
 
 a {
     color: $user_link_color;
 }
 
-// SUBREDDIT BAR
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Subreddit Bar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #sr-header-area {
     background-color: $subreddit_bar_color;
+    .srSep {
+        color: $subreddit_bar_seperator_color;
+    }
 }
 
-#header #sr-header-area a, #sr-more-link, .srdrop > .selected {
+#sr-header-area a, #sr-more-link, .srdrop > .selected {
     color: $subreddit_bar_link_color !important;
     background-color: $subreddit_bar_color;
 }
 
-.srSep {
-    color: $subreddit_bar_seperator_color;
-}
 
 // RES Variant
 
@@ -59,7 +67,7 @@ a {
     background-color: darken($userbar_color, 10%) !important;
     border-right-color: darken($userbar_color, 15%) !important;
     color: $ucsb_gold !important;
-    min-height: 27px; // HotFix till they really fix this.
+    min-height: 27px; // HotFix till RES Developers fix this.
 }
 
 // Normal Variant
@@ -76,11 +84,13 @@ a {
     }
 }
 
+// Make room for tower on right on more space constrained screens.
 .width-clip {
     right: 300px !important;
 }
 
-// HEADER
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #header-bottom-left {
     background-color: $header_background_color;
@@ -103,6 +113,7 @@ a {
 
 // Serif lettering based off of /r/gentlemanboners
 .pagename, .pagename a {
+    // Minion Pro is the recommended UCSB typeface.
     font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
                   Palatino, georgia, garamond, FreeSerif, serif;
     font-size: 16px;
@@ -123,145 +134,141 @@ a {
 }
 
 
-// SIDEBAR
-
-$sidebar_width: 300px;
-
-
-// Hide name
-.titlebox > .redditname {
-    display: none;
-}
-
-.side > .spacer:first-child {
-    padding-top: 320px;
-    background-position: 8px 250px;
-    background-color: $sky-color;
-    background-image: $storke_middle_img;
-    background-repeat: no-repeat;
-    margin: 0;
-}
-
-.side > .spacer:nth-child(2) {
-}
-
-.titlebox form.toggle, .leavemoderator {
-    background-color: $content_and_sidebar_background_color;
-}
-
-$sidebox_border_width: 5px;
-
-@mixin roundbox {
-    padding: 11 - $sidebox_border_width;
-    border: $sidebox_border_width solid $content_and_sidebar_border_color;
-    @include border-radius(5px);
-}
+/* ~~~~~~~~~~~~~~~~~~~~~~ Sidebar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .side {
     background-color: transparent;
     margin: 0px 8px 0px 8px;
     background-position: 8px 0;
-}
 
-.titlebox, #moderation_tools, .sidecontentbox {
-    @include roundbox;
-    background-color: $content_and_sidebar_background_color;
-}
+    // Make space for the tower image element. The background is sky colored to
+    // cover up the repeating element in the background.
+    > .spacer:first-child {
+        padding-top: 320px;
+        background-position: 8px 250px;
+        background-color: $sky-color;
+        background-image: $storke_middle_img;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
 
-// We'll be using the userbox to do submitting stuff.
-.sidebox.create, .sidebox.submit  {
-    display: none;
-}
+    // Storke tower top image from link. 
+    // Make an empty link to Greg Courville's arrangement of Still Alive and stick
+    // it into the sidebar markdown. Otherwise, it will not appear.
+    .md a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
+        height: 331px;
+        width: 300px;
+        background-color: transparent;
+        position: absolute;
+        z-index: 52;
+        top: 28px;
+        right: 0;
+        background-image: $storke_top_img;
+    }
 
-@mixin submit-link {
-    @include border-radius(5px);
-    background-color: $ucsb_blue;
-    color: white;
-    padding: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    float: left;
-    width: 250px;
-    text-align: center;
-    margin: 5px;
-    /* text-shadow: 2px 2px 3px black; */
-    &:hover {
-        color: red;
+    .titlebox {
+        // Hide redundant subreddit name. The tower and the text on the top left should
+        // be enough to identify this reddit as /r/UCSantaBarbara
+        > .redditname {
+            display: none;
+        }
+        
+        // Those little checkboxes
+        .flairtoggle, .leavemoderator {
+            background-color: $content_and_sidebar_background_color;
+        }
+    }
+
+    // We'll be using the userbox and our own buttons to do submitting.
+
+    // Hide sidebox with submit and community create buttons.
+    .sidebox.create, .sidebox.submit  {
+        display: none;
+    }
+
+    .md {
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+
+        // Big buttons for sideboxes
+        a[href$="#submitlink"], a[href$="#selfpost"] {
+            @include border-radius(5px);
+            /* background-color: $ucsb_blue; */
+            @include reddit-linear-gradient(bottom, $ucsb_blue, lighten($ucsb_blue, 10%));
+            background-color: $ucsb_blue;
+            color: white;
+            padding: 5px 0px;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: center;
+            margin: 5px 0px;
+            /* text-shadow: 2px 2px 3px black; */
+            &:hover {
+                color: $ucsb_gold;
+            } 
+        }
+
+        // Pretty h1 wrapper elements that are bars
+        > h1, > h3 {
+            background-color: $sidebar_header_color;
+            color: white;
+            margin-left: -18px;
+            padding-left: 20px;
+            margin-right: 5px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            // Witchcraft for the little wraparound illusion on the H1 elements
+            &:after {
+                display: block;
+                content: "";
+                border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
+                border-style: solid;
+                border-width: 15px;
+                height: 0px;
+                width: 0px;
+                position: absolute;
+                z-index: -1;
+                margin-left: -35px;
+                margin-top: -10px
+            }
+        }
+
+        thead {
+            background-color: $ucsb_blue;
+        }
+    }
+
+    .titlebox, #moderation_tools, .sidecontentbox {
+        @include border-radius(5px);
+        padding: 10px;
+        background-color: $content_and_sidebar_background_color;
+    }
+
+    // Fix login box
+    .login-form-side {
+        background-color: white;
+    }
+
+    // Account Activity box is outside oddly so let's respect that. 
+    .account-activity-box a {
+        background-color: white;
+        @include border-radius(2px);
+        padding: 2px 10px;
+    }
+
+    // Remove duplicate border
+    .sidecontentbox .content{
+        border:none;
     }
 }
 
-.side a[href*="#submitlink"] {
-    @include submit-link;
-    /* padding: 5px 52px; */
-}
 
-.side a[href*="#selfpost"] {
-    @include submit-link;
-}
-
-// Tower
-.side a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
-    height: 331px;
-    width: 300px;
-    background-color: transparent;
-    position: absolute;
-    z-index: 52;
-    top: 28px;
-    right: 0;
-    background-image: $storke_top_img;
-}
-
-@mixin submit-button {
-    margin: 20px 0;
-}
-
-.md p:first-child {
-    @include submit-button;
-}
-
-.md p:nth-child(2) {
-    @include submit-button;
-}
-
-.titlebox .usertext .md > h1 {
-    background-color: $sidebar_header_color;
-    color: white;
-    margin-left: -18px;
-    padding-left: 20px;
-    margin-right: -18px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-// Witchcraft for the little wraparound on the H1 elements
-.titlebox .usertext .md > h1:after {
-    display: block;
-    content: "";
-    border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
-    border-style: solid;
-    border-width: 15px;
-    height: 0px;
-    width: 0px;
-    position: absolute;
-    z-index: -1;
-    margin-left: -35px;
-    margin-top: -10px
-}
-
-.titlebox .usertext .md {
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-}
-
-// Fix login box
-.login-form-side {
-    background-color: white;
-}
-
-// CONTENT
+/* ~~~~~~~~~~~~~~~~~~~~~~ Content ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body {
     background-color: $sky_color;
@@ -269,57 +276,56 @@ body {
     background-repeat: repeat-y;
     background-position: 100% 70px;
     color: $plain_text_color;
-}
+    .content {
+        margin-top: 8px;
+        margin-left: 8px;
+        margin-right: 330px;
+        @include border-radius(5px);
+        background-color: $content_and_sidebar_background_color;
+        padding: 10px;
+        // Link State
+        .thing {
+            border-top: 1px solid lighten(gray, 40%);
+            padding: 7px 0;
 
-.content {
-    margin-left: 8px;
-    margin-right: 330px;
-    @include border-radius(5px);
-    background-color: $content_and_sidebar_background_color;
-    /* border: 5px solid $content_and_sidebar_border_color; */
-    padding: 5px 15px;
-}
+            &:first-child {
+                border-top: 0;
+            }
 
-// Content Items
-.link {
-    &:first-child {
-        border-top: 0;
-    }
-    border-top: 1px solid lighten(gray, 40%);
-    padding: 7px 0;
-}
+            .title {
+                // For non-logged in lusers or not users whatever.
+                color: $item_unvisited_color;
+                &:visited, &.click {
+                    color: $item_visited_color;
+                }
+                &.loggedin {
+                    color: $item_unvisited_color;
+                    &:visited, &.click, &.click:visited {
+                        color: $item_visited_color;
+                    }
+                }
+            }
 
-// Link State
-.thing {
-    .title {
-        // For non-logged in lusers or not users whatever.
-        color: $item_unvisited_color;
-        &:visited, &.click {
-            color: $item_visited_color;
-        }
-        &.loggedin {
-            color: $item_unvisited_color;
-            &:visited, &.click, &.click:visited {
-                color: $item_visited_color;
+            // This is the little link to a user's profile underneath the entry link
+            .tagline a {
+                // user link color
+                color: $user_link_color;
+            }
+
+            // RES do not do dashed borders for keyboard navigation
+            .entry.keyHighlight {
+                outline-width: 0;
+                border-right: 1px solid blue;
             }
         }
     }
 }
 
-.tagline a {
-    // user color
-    color: $user_link_color;
-}
 
-// RES do not do dashed borders
-.entry.keyHighlight {
-    outline-width: 0;
-    border-right: 1px solid blue;
-}
+/* ~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~ */
 
-// FOOTER
-
+// Give a solid background for no fall-through
 .footer.rounded {
-    background-color: beige;
+    background-color: $content_and_sidebar_background_color;
     color: black;
 }
