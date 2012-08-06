@@ -1,10 +1,11 @@
-// GLOBAL
+/* ~~~~~~~~~~~~~~~~~~~~~~ Global ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 a {
     color: $user_link_color;
 }
 
-// SUBREDDIT BAR
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Subreddit Bar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #sr-header-area {
     background-color: $subreddit_bar_color;
@@ -125,7 +126,7 @@ a {
 }
 
 
-// SIDEBAR
+/* ~~~~~~~~~~~~~~~~~~~~~~ Sidebar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .side {
     background-color: transparent;
@@ -245,8 +246,7 @@ a {
 }
 
 
-
-// CONTENT
+/* ~~~~~~~~~~~~~~~~~~~~~~ Content ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body {
     background-color: $sky_color;
@@ -298,7 +298,8 @@ body {
     }
 }
 
-// FOOTER
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Give a solid background for no fall-through
 .footer.rounded {
