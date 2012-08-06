@@ -126,9 +126,15 @@ a {
 
 .tabmenu {
     z-index: 55;
-    li a {
-        background-color: $ucsb_gold;
-        color: $ucsb_blue;
+    li {
+        a {
+            background-color: $ucsb_gold;
+            color: $ucsb_blue;
+        }
+        &.selected a {
+            background-color: lighten($sky_color, 10%);
+            border-bottom-color: lighten($sky_color, 10%);
+        }
     }
 }
 
