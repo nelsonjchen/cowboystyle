@@ -202,10 +202,6 @@ a {
             } 
         }
 
-        p:first-child, p:nth-child(2){
-            margin: 20px 0;
-        }
-
         // Pretty h1 wrapper elements that are bars
         > h1 {
             background-color: $sidebar_header_color;
