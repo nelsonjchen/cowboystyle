@@ -249,7 +249,7 @@ a {
     .account-activity-box a {
         background-color: white;
         @include border-radius(2px);
-        padding: 2px;
+        padding: 2px 10px;
     }
 
     // Remove duplicate border
