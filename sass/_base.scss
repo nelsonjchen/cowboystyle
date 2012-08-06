@@ -1,5 +1,12 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~ Global ~~~~~~~~~~~~~~~~~~~~~~~ */
 
+@mixin reddit-linear-gradient($direction, $from_color, $to_color){
+    background-image: -webkit-linear-gradient($direction, $from_color, $to_color);
+    background-image: -moz-linear-gradient($direction, $from_color, $to_color);
+    background-image: -o-linear-gradient($direction, $from_color, $to_color);
+    background-image: linear-gradient($direction, $from_color, $to_color);
+}
+
 a {
     color: $user_link_color;
 }
@@ -187,6 +194,8 @@ a {
         // Big buttons for sideboxes
         a[href$="#submitlink"], a[href$="#selfpost"] {
             @include border-radius(5px);
+            /* background-color: $ucsb_blue; */
+            @include reddit-linear-gradient(bottom, $ucsb_blue, lighten($ucsb_blue, 10%));
             background-color: $ucsb_blue;
             color: white;
             padding: 5px 0px;
