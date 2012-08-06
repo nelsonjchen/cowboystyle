@@ -7,8 +7,13 @@ a {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~ Subreddit Bar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#sr-header-area {
-    background-color: $subreddit_bar_color;
+#header {
+    #sr-header-area {
+        background-color: $subreddit_bar_color;
+        .srSep {
+            color: $subreddit_bar_seperator_color;
+        }
+    }
 }
 
 #header #sr-header-area a, #sr-more-link, .srdrop > .selected {
@@ -16,9 +21,6 @@ a {
     background-color: $subreddit_bar_color;
 }
 
-.srSep {
-    color: $subreddit_bar_seperator_color;
-}
 
 // RES Variant
 
