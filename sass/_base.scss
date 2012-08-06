@@ -251,6 +251,11 @@ a {
         @include border-radius(2px);
         padding: 2px;
     }
+
+    // Remove duplicate border
+    .sidecontentbox .content{
+        border:none;
+    }
 }
 
 
