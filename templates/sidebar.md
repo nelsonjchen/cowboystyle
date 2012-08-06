@@ -3,6 +3,8 @@
 
 [Submit a Text Post](//reddit.com/r/{{subreddit}}/submit?selftext=true#selfpost) 
 
+***
+
 Follow us on [Twitter](http://twitter.com/reddit_ucsb) to get near real-time updates of new submissions.
 
 ### Local News
