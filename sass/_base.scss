@@ -7,16 +7,14 @@ a {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~ Subreddit Bar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#header {
-    #sr-header-area {
-        background-color: $subreddit_bar_color;
-        .srSep {
-            color: $subreddit_bar_seperator_color;
-        }
+#sr-header-area {
+    background-color: $subreddit_bar_color;
+    .srSep {
+        color: $subreddit_bar_seperator_color;
     }
 }
 
-#header #sr-header-area a, #sr-more-link, .srdrop > .selected {
+#sr-header-area a, #sr-more-link, .srdrop > .selected {
     color: $subreddit_bar_link_color !important;
     background-color: $subreddit_bar_color;
 }
