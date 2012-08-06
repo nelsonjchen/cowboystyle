@@ -26,8 +26,6 @@ notice:
   below the horizon.
   * Colors are adjusted to show that it is night on campus.
   * Images that make up storke tower are swapped for night versions.
-  * Users with browsers that support APNG will have a blinking Storke Tower
-    that is just like the real thing!  
 * Header Reddit Logo text is Retina-display browser friendly.
 * Sidebar styling is updated to something a bit more modern.
 * Content submit links have been modified to be more prominent.
@@ -230,9 +228,7 @@ must include the source. The source will be placed into that Dropbox folder.
 Images that must be uploaded to the subreddit before uploading CSS include:
 
 * Storke Tower
-    * Top Night
-        * This special image is an APNG with the top light blinking at 40 times
-          per minute. Reddit does not allow gifs. It's a minor detail.
+    * Top Night with aircraft warning lights and little shadows
     * Top Day
     * Middle Night
     * Middle Day
@@ -252,10 +248,6 @@ One more image that should be uploaded but is not required:
 
 Images for this subreddit were created with Pixen for the tower,
 Illustrator/Inkscape for the alien.
-
-The APNG version of the tower is compiled with `apng2asm` which is probably not
-in your distribution's repositories. You will most likely have to download this
-from their sourceforge site.
 
 ### Sidebar
 
