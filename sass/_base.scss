@@ -100,7 +100,7 @@ a {
 }
 
 #header {
-    border-bottom: 0;
+    border-bottom-color: $header_content_border_color;
     z-index: 45;
 }
 
@@ -124,13 +124,19 @@ a {
 
 // This Yellows the tabs
 
-.tabmenu li a {
-    background-color: $ucsb_gold;
-    color: $ucsb_blue;
-}
-
 .tabmenu {
     z-index: 55;
+    li {
+        a {
+            background-color: $ucsb_gold;
+            color: $ucsb_blue;
+        }
+        &.selected a {
+            /* background-color: lighten($sky_color, 40%); */
+            border: 1px solid $header_content_border_color;
+            border-bottom-color: lighten($sky_color, 10%);
+        }
+    }
 }
 
 
