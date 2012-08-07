@@ -22,8 +22,8 @@ a {
 }
 
 #sr-header-area a, #sr-more-link, .srdrop > .selected {
-    color: $subreddit_bar_link_color !important;
     background-color: $subreddit_bar_color;
+    color: $subreddit_bar_link_color !important;
 }
 
 
@@ -44,12 +44,11 @@ a {
 
 #RESShortcutsEditContainer {
     position: relative !important;
-    float: left;
     top: -18px !important;
-    left: -4px;
-    height: 1px !important;
-    width: 0 !important;
     left: 40px;
+    float: left;
+    width: 0 !important;
+    height: 1px !important;
     z-index: 7 !important;
 }
 
@@ -73,12 +72,12 @@ a {
 // Normal Variant
 
 #header-bottom-right {
+    background-color: $userbar_color;
     top: 0;
+    padding-left: 10px;
     height: 12px;
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(7px);
-    padding-left: 10px;
-    background-color: $userbar_color;
     a, b, &>.separator {
         color: $ucsb_gold;
     }
