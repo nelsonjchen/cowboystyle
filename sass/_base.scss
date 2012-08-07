@@ -295,6 +295,7 @@ body {
         .thing {
             border-top: 1px solid lighten(gray, 40%);
             padding: 7px 0;
+            margin-bottom: 0px;
 
             &.last-clicked {
                 background: lighten($ucsb_gold, 35%);
