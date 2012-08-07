@@ -105,12 +105,12 @@ a {
 
 
 #header-img {
+    background-image: $header_image_alien;
     height: 40px;
     width: 140px;
-    background-image: $header_image_alien;
 }
 
-// Serif lettering based off of /r/gentlemanboners
+// Serif base from /r/gentlemanboners
 .pagename, .pagename a {
     // Minion Pro is the recommended UCSB typeface.
     font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
@@ -122,7 +122,6 @@ a {
 }
 
 // This Yellows the tabs
-
 .tabmenu {
     z-index: 55;
     li {
@@ -131,9 +130,8 @@ a {
             color: $ucsb_blue;
         }
         &.selected a {
-            /* background-color: lighten($sky_color, 40%); */
-            border: 1px solid $header_content_border_color;
             border-bottom-color: lighten($sky_color, 10%);
+            border: 1px solid $header_content_border_color;
         }
     }
 }
