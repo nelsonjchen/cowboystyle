@@ -298,7 +298,6 @@ body {
             margin-bottom: 0px;
 
             &.last-clicked {
-                background: lighten($ucsb_gold, 35%);
                 // Nullify dashed lines
                 border-left: 0;
                 border-right: 0;
