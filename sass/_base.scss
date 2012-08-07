@@ -280,11 +280,11 @@ body {
     background-position: 100% 70px;
     color: $plain_text_color;
     .content {
+        background-color: $content_and_sidebar_background_color;
+        @include border-radius(5px);
         margin-top: 8px;
         margin-left: 8px;
         margin-right: 330px;
-        @include border-radius(5px);
-        background-color: $content_and_sidebar_background_color;
         padding: 10px;
         // Link State
         .thing {
