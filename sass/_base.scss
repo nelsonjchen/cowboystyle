@@ -130,8 +130,8 @@ a {
             color: $ucsb_blue;
         }
         &.selected a {
-            border-bottom-color: lighten($sky_color, 10%);
             border: 1px solid $header_content_border_color;
+            border-bottom-color: lighten($sky_color, 10%);
         }
     }
 }
