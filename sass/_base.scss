@@ -141,17 +141,17 @@ a {
 
 .side {
     background-color: transparent;
-    margin: 0px 8px 0px 8px;
     background-position: 8px 0;
+    margin: 0px 8px 0px 8px;
 
     // Make space for the tower image element. The background is sky colored to
     // cover up the repeating element in the background.
     > .spacer:first-child {
-        padding-top: 320px;
-        background-position: 8px 250px;
         background-color: $sky-color;
         background-image: $storke_middle_img;
         background-repeat: no-repeat;
+        background-position: 8px 250px;
+        padding-top: 320px;
         margin: 0;
     }
 
@@ -159,14 +159,14 @@ a {
     // Make an empty link to Greg Courville's arrangement of Still Alive and stick
     // it into the sidebar markdown. Otherwise, it will not appear.
     .md a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
-        height: 331px;
-        width: 300px;
         background-color: transparent;
+        background-image: $storke_top_img;
         position: absolute;
-        z-index: 52;
         top: 28px;
         right: 0;
-        background-image: $storke_top_img;
+        height: 330px;
+        width: 300px;
+        z-index: 52;
     }
 
     .titlebox {
@@ -201,15 +201,14 @@ a {
             @include reddit-linear-gradient(bottom, $ucsb_blue, lighten($ucsb_blue, 10%));
             background-color: $ucsb_blue;
             color: white;
-            padding: 5px 0px;
+            text-align: center;
             font-size: 20px;
             font-weight: bold;
+            width: 100%;
+            padding: 5px 0px;
+            margin: 5px 0px;
             position: relative;
             float: left;
-            width: 100%;
-            text-align: center;
-            margin: 5px 0px;
-            /* text-shadow: 0px 0px 3px black; */
             &:hover {
                 @include reddit-linear-gradient(bottom, lighten($ucsb_blue, 10%), lighten($ucsb_blue, 20%));
                 /* color: $ucsb_gold; */
@@ -228,7 +227,6 @@ a {
             padding-bottom: 5px;
             // Witchcraft for the little wraparound illusion on the H1 elements
             &:after {
-                display: block;
                 content: "";
                 border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
                 border-style: solid;
@@ -236,9 +234,10 @@ a {
                 height: 0px;
                 width: 0px;
                 position: absolute;
-                z-index: -1;
+                display: block;
                 margin-left: -35px;
-                margin-top: -10px
+                margin-top: -10px;
+                z-index: -1;
             }
         }
 
@@ -248,9 +247,9 @@ a {
     }
 
     .titlebox, #moderation_tools, .sidecontentbox {
+        background-color: $content_and_sidebar_background_color;
         @include border-radius(5px);
         padding: 10px;
-        background-color: $content_and_sidebar_background_color;
     }
 
     // Fix login box
