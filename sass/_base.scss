@@ -83,6 +83,11 @@ a {
     }
 }
 
+// Float Never Ending Reddit Toggle icon above elements, like the tower.
+#NREFloat {
+    z-index: 100;
+}
+
 // Make room for tower on right on more space constrained screens.
 .width-clip {
     right: 300px !important;
