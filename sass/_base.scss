@@ -74,10 +74,10 @@ a {
 #header-bottom-right {
     background-color: $userbar_color;
     top: 0;
-    padding-left: 10px;
-    height: 12px;
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(7px);
+    padding-left: 10px;
+    height: 12px;
     a, b, &>.separator {
         color: $ucsb_gold;
     }
