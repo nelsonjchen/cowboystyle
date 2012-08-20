@@ -38,10 +38,22 @@ task :compass do
   sh("compass compile")  
 end
 
-task :clipboard_day do
-  sh("cat stylesheets/day.css | pbcopy")
+namespace :clipboard do
+  task :day do
+    sh("cat stylesheets/day.css | pbcopy")
+  end
+
+  task :night do
+    sh("cat stylesheets/night.css | pbcopy")
+  end
 end
 
-task :clipboard_night do
-  sh("cat stylesheets/night.css | pbcopy")
+namespace :gist do
+  task :day do
+    sh("gist stylesheets/day.css")
+  end
+
+  task :night do
+    sh("gist stylesheets/night.css")
+  end
 end
