@@ -203,11 +203,11 @@ a {
         a[href$="#submitlink"], a[href$="#selfpost"] {
             @include border-radius(5px);
             /* background-color: $ucsb_blue; */
-            @include reddit-linear-gradient(bottom, $ucsb_blue, lighten($ucsb_blue, 10%));
-            background-color: $ucsb_blue;
-            color: white;
+            @include reddit-linear-gradient(bottom, $sky_color, lighten($sky_color, 10%));
+            background-color: $sky_color;
+            color: #369;
             text-align: center;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: bold;
             width: 100%;
             padding: 5px 0px;
@@ -215,7 +215,7 @@ a {
             position: relative;
             float: left;
             &:hover {
-                @include reddit-linear-gradient(bottom, lighten($ucsb_blue, 10%), lighten($ucsb_blue, 20%));
+                @include reddit-linear-gradient(bottom, darken($sky_color, 5%), darken($sky_color, 15%));
                 /* color: $ucsb_gold; */
             } 
         }
@@ -293,9 +293,9 @@ body {
         padding: 10px;
         // Link State
         .thing {
-            border-top: 1px solid lighten(gray, 40%);
-            padding: 7px 0;
-            margin-bottom: 0px;
+            /* border-top: 1px solid lighten(gray, 40%); */
+            /* padding: 7px 0; */
+            /* margin-bottom: 0px; */
 
             &.last-clicked {
                 // Nullify dashed lines
@@ -305,7 +305,7 @@ body {
             }
 
             &:first-child {
-                border-top: 0;
+                /* border-top: 0; */
             }
 
             .title {
