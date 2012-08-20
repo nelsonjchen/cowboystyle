@@ -215,7 +215,7 @@ a {
             position: relative;
             float: left;
             &:hover {
-                @include reddit-linear-gradient(bottom, darken($submit_base_color, 5%), darken($sky_color, 15%));
+                @include reddit-linear-gradient(bottom, darken($submit_base_color, 5%), darken($submit_base_color, 15%));
                 /* color: $ucsb_gold; */
             } 
         }
