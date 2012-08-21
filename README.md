@@ -1,6 +1,6 @@
 # Cowboystyle
 
-Cowboystyle is a proposed stylesheet and set of tools for the stylesheet and
+Cowboystyle is a stylesheet and set of tools for the stylesheet and
 sidebar used in [r/UCSantaBarbara](http://www.reddit.com/r/ucsantabarbara).  
 
 Current Maintainer's Demo/Development Reddits:
