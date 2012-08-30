@@ -1,6 +1,7 @@
 @import "colors/night";
+@import "mixins/body-style";
 
-.res-night-mode {
+.res-nightmode {
     @include body-style;
     @import "imports/body";
 }
