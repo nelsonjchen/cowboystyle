@@ -123,8 +123,8 @@ a {
     z-index: 55;
     li {
         a {
-            background-color: $ucsb_gold;
-            color: $ucsb_blue;
+            background-color: $tab_background_color;
+            color: $tab_color;
         }
         &.selected a {
             border: 1px solid $header_content_border_color;
