@@ -3,7 +3,7 @@ a[href="http://twitter.com/reddit_ucsb"]:after {
     width: 68px;
     height: 16px;
     content: "";
-    /* background-image: url(http://thumbs.reddit.com/t5_2shs9_0.png); */
+    background-image: url(%%twitter%%);
     background-position: -0px;
     display: inline-block;
     cursor: pointer;
@@ -34,12 +34,12 @@ a[href="http://twitter.com/reddit_ucsb"]:after {
     float: left;
     width: 16px;
     height: 16px;
-    /* background: transparent url(http://thumbs.reddit.com/t5_2shs9_2.png) center center no-repeat */
+    background: transparent url(%%light-bulb%%) center center no-repeat;
     }
 .flair-tweetposter {
     border: 0;
     padding: 0;
-    /* background: transparent url(http://thumbs.reddit.com/t5_2shs9_1.png) center center no-repeat; */
+    background: transparent url(%%tweet-poster%%) center center no-repeat;
     height: 16px;
     width: 16px;
     text-indent: -9999px
