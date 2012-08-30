@@ -205,9 +205,10 @@ a {
             text-align: center;
             font-size: 15px;
             font-weight: bold;
-            width: 100%;
+            width: 278px;
             padding: 5px 0px;
             margin: 5px 0px;
+            border: 1px solid darken($submit_base_color, 20%);
             position: relative;
             float: left;
             &:hover {
