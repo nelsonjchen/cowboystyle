@@ -8,21 +8,21 @@ a {
 /* ~~~~~~~~~~~~~~~~~~~~~~ Subreddit Bar ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #sr-header-area {
-    background-color: $subreddit_bar_color;
+    background-color: $subreddit_bar_color !important;
     .srSep {
-        color: $subreddit_bar_seperator_color;
+        color: $subreddit_bar_seperator_color !important;
     }
 }
 
 #sr-header-area a, #sr-more-link, .srdrop > .selected {
-    background-color: $subreddit_bar_color;
+    background-color: $subreddit_bar_color !important;
     color: $subreddit_bar_link_color !important;
 }
 
 // RES Variant
 
 #RESShortcuts {
-    color: $subreddit_bar_link_color;
+    color: $subreddit_bar_link_color !important;
 }
 
 #srLeftContainer {
@@ -64,14 +64,14 @@ a {
 // Normal Variant
 
 #header-bottom-right {
-    background-color: $userbar_color;
+    background-color: $userbar_color !important;
     top: 0;
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(7px);
     padding-left: 10px;
     /* height: 12px; */
     a, b, &>.separator {
-        color: $ucsb_gold;
+        color: $ucsb_gold !important;
     }
 }
 
