@@ -264,6 +264,11 @@ a {
         border: none;
         margin: 0;
     }
+
+    // RES Night mode force spacer to be transparent
+    .spacer {
+        background-color: transparent !important;
+    }
 }
 
 
