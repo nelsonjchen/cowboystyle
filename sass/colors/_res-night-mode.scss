@@ -8,4 +8,7 @@ $content_thumbnail_background_color: #ddd;
 $submit_base_color: #AAA;
 $submit_text_color: $user_link_color;
 
-$thing_keyHighlight_right: #ccc;
+$subreddit_bar_color: darken(#2D2D2D, 10%);
+$subreddit_bar_link_color: #bbb;
+
+$userbar_color: darken($ucsb_blue, 10%);
