@@ -5,7 +5,7 @@
 
 ***
 
-Follow us on [Twitter](http://twitter.com/reddit_ucsb) to get near real-time updates of new submissions.
+Follow us on [](http://twitter.com/reddit_ucsb) to get near real-time updates of new submissions.
 
 ### Local News
 
