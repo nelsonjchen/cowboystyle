@@ -324,6 +324,7 @@ a {
             border-right: 2px solid $thing_keyHighlight_right;
         }
 
+        // Thumbnaul color diff for night mode so it doesn't fall out.
         .thumbnail {
             background-color: $content_thumbnail_background_color;
         }
