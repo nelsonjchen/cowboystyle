@@ -191,13 +191,17 @@ a {
         padding: 0;
         overflow: visible;
 
+        p {
+            color: black !important;
+        }
+
         // Big buttons for sideboxes
         a[href$="#submitlink"], a[href$="#selfpost"] {
             @include border-radius(5px);
             /* background-color: $ucsb_blue; */
             @include reddit-linear-gradient(bottom, $submit_base_color, lighten($submit_base_color, 10%));
-            background-color: $submit_base_color;
-            color: $submit_text_color;
+            background-color: $submit_base_color !important;
+            color: $submit_text_color !important;
             text-align: center;
             font-size: 15px;
             font-weight: bold;
@@ -244,7 +248,7 @@ a {
     }
 
     .titlebox, #moderation_tools, .sidecontentbox {
-        background-color: $content_and_sidebar_background_color;
+        background-color: $content_and_sidebar_background_color !important;
         @include border-radius(5px);
         padding: 10px;
     }
