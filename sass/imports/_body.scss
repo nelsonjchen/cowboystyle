@@ -89,14 +89,14 @@ a {
 /* ~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #header-bottom-left {
-    background-color: $header_background_color;
+    background-color: $header_background_color !important;
     background-repeat: repeat-y;
     background-position: 100% 0%;
     padding-right: 300px
 }
 
 #header {
-    border-bottom-color: $header_content_border_color;
+    border-bottom-color: $header_content_border_color !important;
     z-index: 45;
 }
 
