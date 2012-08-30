@@ -35,6 +35,8 @@ notice:
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
 * Pretty Buttons for links on the side.
+* RES Night Mode will switch the theme to night mode in addition to normal
+  Night Mode duties.
 
 ### Concepts to be still investigated pending approval
 
