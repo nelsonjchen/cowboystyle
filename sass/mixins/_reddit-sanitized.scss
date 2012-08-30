@@ -1,0 +1,7 @@
+
+@mixin reddit-linear-gradient($direction, $from_color, $to_color){
+    background-image: -webkit-linear-gradient($direction, $from_color, $to_color);
+    background-image: -moz-linear-gradient($direction, $from_color, $to_color);
+    background-image: -o-linear-gradient($direction, $from_color, $to_color);
+    background-image: linear-gradient($direction, $from_color, $to_color);
+}

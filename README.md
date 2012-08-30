@@ -3,9 +3,12 @@
 Cowboystyle is a stylesheet and set of tools for the stylesheet and
 sidebar used in [r/UCSantaBarbara](http://www.reddit.com/r/ucsantabarbara).  
 
+Only the Perma-Day version is used in the subreddit now. However, development
+continues on both.
+
 Current Maintainer's Demo/Development Reddits:
 
-* [Temporal](http://www.reddit.com/r/crazysimreddittest)
+* [Temporal or Heroku hosted bot version](http://www.reddit.com/r/crazysimreddittest)
 * [Perma-Day](http://www.reddit.com/r/crazysimreddittesttwo)
 * [Perma-Night](http://www.reddit.com/r/crazysimreddittest3)
 
@@ -31,14 +34,13 @@ notice:
 * Content submit links have been modified to be more prominent.
 * Reddit Enhancement Suite elements are taken into consideration for users of
   those extensions to ensure their continued functionality.
+* Pretty Buttons for links on the side.
+* RES Night Mode will switch the theme to night mode in addition to normal
+  Night Mode duties.
 
-### Concepts to be still investigated
+### Concepts to be still investigated pending approval
 
 * Apple Calendar like icon for events with dates.
-* Pretty Buttons for links on the side.
-
-### Concepts that will be investigated pending technical overhaul
-
 * Subset of r/UCSB4Sale in Sidebar
 * Art for page footer
 
@@ -200,9 +202,16 @@ is run with `REDDIT_STYLESHEET_COMPILE=true`, `compass compile` or by the
 `guard-compass` plugin in `guard`. 
 
 During compilation, `day.css` and `night.css` are generated inside the
-stylesheets folder. Most of their common code is in the `_base.scss` file. Use
+stylesheets folder. Most of their common code is in the `imports/_base.scss` file. Use
 of SCSS @imports are done to import colors and different image urls from the `colors`
-folder for placement in `day.css` and `night.css`.
+folder for placement in `day.css` and `night.css`. The body code is in
+`mixins/_body-style.scss` due to special support needed in changing the top
+level element for RES Night mode.
+
+Additionally, RES Night Mode has another color settings file. These will be
+applied to RES Night mode only. This file is `colors/res-night-mode.scss`. If
+you read that file, you will notice that the colors are based off of the night
+mode colors.
 
 You may upload these css files into the test subreddits by editing their
 stylesheets manually and pasting in the content from the generated files.

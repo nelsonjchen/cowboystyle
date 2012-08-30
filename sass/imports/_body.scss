@@ -1,0 +1,344 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~ Global ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+a {
+    color: $user_link_color;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Subreddit Bar ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#sr-header-area {
+    background-color: $subreddit_bar_color !important;
+    .srSep {
+        color: $subreddit_bar_seperator_color !important;
+    }
+}
+
+#sr-header-area a, #sr-more-link, .srdrop > .selected {
+    background-color: $subreddit_bar_color !important;
+    color: $subreddit_bar_link_color !important;
+}
+
+// RES Variant
+
+#RESShortcuts {
+    color: $subreddit_bar_link_color !important;
+}
+
+#srLeftContainer {
+    max-height: 19px !important;
+    height: 19px !important;
+}
+
+#RESShortcutsViewport {
+    padding-left: 50px;
+}
+
+#RESShortcutsEditContainer {
+    position: relative !important;
+    top: -18px !important;
+    left: 40px;
+    float: left;
+    width: 0 !important;
+    height: 1px !important;
+    z-index: 7 !important;
+}
+
+#RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+    background-color: $subreddit_bar_color !important;
+    color: $subreddit_bar_link_color !important; 
+}
+
+.res-navTop {
+    top: 0 !important;
+    z-index: 10 !important;
+}
+
+#userbarToggle {
+    background-color: darken($userbar_color, 10%) !important;
+    border-right-color: darken($userbar_color, 15%) !important;
+    color: $ucsb_gold !important;
+    min-height: 27px; // HotFix till RES Developers fix this.
+}
+
+// Normal Variant
+
+#header-bottom-right {
+    background-color: $userbar_color !important;
+    top: 0;
+    @include border-top-left-radius(0);
+    @include border-bottom-left-radius(7px);
+    padding-left: 10px;
+    height: 18px;
+    a, b, &>.separator {
+        color: $ucsb_gold !important;
+    }
+}
+
+// Float Never Ending Reddit Toggle icon above elements, like the tower.
+#NREFloat {
+    z-index: 100;
+}
+
+// Make room for tower on right on more space constrained screens.
+.width-clip {
+    right: 300px !important;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#header-bottom-left {
+    background-color: $header_background_color !important;
+    background-repeat: repeat-y;
+    background-position: 100% 0%;
+    padding-right: 300px
+}
+
+#header {
+    border-bottom-color: $header_content_border_color !important;
+    z-index: 45;
+}
+
+
+#header-img {
+    background-image: $header_image_alien;
+    height: 40px;
+    width: 140px;
+}
+
+// Serif base from /r/gentlemanboners
+.pagename, .pagename a {
+    // Minion Pro is the recommended UCSB typeface.
+    font-family: "Minion Pro", "Hoefler Text", "Palatino Linotype", "Book Antiqua",
+                  Palatino, georgia, garamond, FreeSerif, serif;
+    font-size: 16px;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    color: $ucsb_gold;
+}
+
+// This Yellows the tabs
+.tabmenu {
+    z-index: 55;
+    li {
+        a {
+            background-color: $ucsb_gold;
+            color: $ucsb_blue;
+        }
+        &.selected a {
+            border: 1px solid $header_content_border_color;
+            border-bottom-color: lighten($sky_color, 10%);
+        }
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Sidebar ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.side {
+    background-color: transparent;
+    background-position: 8px 0;
+    margin: 0px 8px 0px 8px;
+
+    // Make space for the tower image element. The background is sky colored to
+    // cover up the repeating element in the background.
+    > .spacer:first-child {
+        background-color: $sky-color !important;
+        background-image: $storke_middle_img;
+        background-repeat: no-repeat;
+        background-position: 8px 250px;
+        padding-top: 320px;
+        margin: 0;
+    }
+
+    // Storke tower top image from link. 
+    // Make an empty link to Greg Courville's arrangement of Still Alive and stick
+    // it into the sidebar markdown. Otherwise, it will not appear.
+    .md a[href="http://www.youtube.com/watch?v=JPPjS-TCCqk"] {
+        background-color: transparent;
+        background-image: $storke_top_img;
+        position: absolute;
+        top: 28px;
+        right: 0;
+        height: 330px;
+        width: 300px;
+        z-index: 52;
+    }
+
+    .titlebox {
+        // Hide redundant subreddit name. The tower and the text on the top left should
+        // be enough to identify this reddit as /r/UCSantaBarbara
+        > .redditname {
+            display: none;
+        }
+        
+        // Those little checkboxes
+        .flairtoggle, .leavemoderator {
+            background-color: $content_and_sidebar_background_color;
+        }
+    }
+
+    // We'll be using the userbox and our own buttons to do submitting.
+
+    // Hide sidebox with submit and community create buttons.
+    .sidebox.create, .sidebox.submit  {
+        display: none;
+    }
+
+    .md {
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+
+        p {
+            color: $content_and_sidebar_text_color !important;
+        }
+
+        // Big buttons for sideboxes
+        a[href$="#submitlink"], a[href$="#selfpost"] {
+            @include border-radius(5px);
+            /* background-color: $ucsb_blue; */
+            @include reddit-linear-gradient(bottom, $submit_base_color, lighten($submit_base_color, 10%));
+            background-color: $submit_base_color !important;
+            color: $submit_text_color !important;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            width: 278px;
+            padding: 5px 0px;
+            margin: 5px 0px;
+            border: 1px solid darken($submit_base_color, 20%);
+            position: relative;
+            float: left;
+            &:hover {
+                @include reddit-linear-gradient(bottom, darken($submit_base_color, 5%), darken($submit_base_color, 15%));
+                /* color: $ucsb_gold; */
+            } 
+        }
+
+        // Pretty h1 wrapper elements that are bars
+        > h1, > h3 {
+            background-color: $sidebar_header_color;
+            color: white;
+            margin-left: -18px;
+            margin-right: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            // Witchcraft for the little wraparound illusion on the H1 elements
+            &:after {
+                content: "";
+                border-color: transparent darken($sidebar_header_color, 10%) transparent transparent;
+                border-style: solid;
+                border-width: 15px;
+                height: 0px;
+                width: 0px;
+                position: absolute;
+                display: block;
+                margin-left: -35px;
+                margin-top: -10px;
+                z-index: -1;
+            }
+        }
+
+        thead {
+            background-color: $ucsb_blue;
+        }
+    }
+
+    .titlebox, #moderation_tools, .sidecontentbox, .account-activity-box {
+        background-color: $content_and_sidebar_background_color !important;
+        @include border-radius(5px);
+        padding: 10px !important;
+    }
+
+    // Fix login box
+    .login-form-side {
+        background-color: white;
+    }
+
+    // Remove duplicate border and margin override
+    .sidecontentbox .content{
+        border: none;
+        margin: 0;
+    }
+
+    .account-activity-box a {
+        font-size: 13px;
+    }
+
+    // RES Night mode force spacer to be transparent
+    .spacer {
+        background-color: transparent !important;
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Content ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.content {
+    background-color: $content_and_sidebar_background_color;
+    @include border-radius(5px);
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 330px;
+    padding: 10px !important;
+    // Link State
+    .thing {
+        /* border-top: 1px solid lighten(gray, 40%); */
+        /* padding: 7px 0; */
+        /* margin-bottom: 0px; */
+
+        /* &.last-clicked { */
+        /* // Nullify dashed lines */
+        /* border-left: 0; */
+        /* border-right: 0; */
+        /* border-bottom: 0; */
+        /* } */
+
+        &:first-child {
+            /* border-top: 0; */
+        }
+
+        .title {
+            // For non-logged in lusers or not users whatever.
+            color: $item_unvisited_color;
+            &:visited, &.click {
+                color: $item_visited_color;
+            }
+            &.loggedin {
+                color: $item_unvisited_color;
+                &:visited, &.click, &.click:visited {
+                    color: $item_visited_color;
+                }
+            }
+        }
+
+        // This is the little link to a user's profile underneath the entry link
+        .tagline a {
+            // user link color
+            color: $user_link_color;
+        }
+
+        // RES do not do dashed borders for keyboard navigation
+        .entry.keyHighlight {
+            outline-width: 0;
+            border-right: 2px solid $thing_keyHighlight_right;
+        }
+
+        // Thumbnaul color diff for night mode so it doesn't fall out.
+        .thumbnail {
+            background-color: $content_thumbnail_background_color;
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Give a solid background for no fall-through
+.footer.rounded {
+    background-color: $content_and_sidebar_background_color;
+    color: black;
+}
