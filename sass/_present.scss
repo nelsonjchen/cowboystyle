@@ -1,25 +1,33 @@
-/*Twitter Feed Graphic*/
-/* a[href="http://twitter.com/reddit_ucsb"]:after { */
-    /* width: 68px; */
-    /* height: 16px; */
-    /* content: ""; */
-    /* [> background-image: url(http://thumbs.reddit.com/t5_2shs9_0.png); <] */
-    /* background-position: -0px; */
-    /* display: inline-block; */
-    /* cursor: pointer; */
-    /* position: relative */
-    /* } */
-/*replace "readers" with gauchos*/
-div.titlebox span.word {
+   /*Twitter Feed Graphic*/
+a[href="http://twitter.com/reddit_ucsb"]:after {
+    width: 68px;
+    height: 16px;
+    content: "";
+    /* background-image: url(http://thumbs.reddit.com/t5_2shs9_0.png); */
+    background-position: -0px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative
+    }
+/* Disable create and submit */
+.side .sidebox.create, .side .sidebox.submit {
     display: none
     }
-div.titlebox span.number:after {
-    content: " Gauchos"
+/* replace "readers" with gauchos */
+.subscribers span.word {
+    display: none
+    }
+.subscribers span.number:after {
+    content: " gauchos subscribed"
+    }
+/* replace "users here now" with "guachos online" */
+.users-online span.word {
+    display: none
+    }
+.users-online span.number:after {
+    content: " gauchos online in the last 15 min"
     }
 /*Flair Classes*/
-.flair-mod {
-    content: ""
-    }
 .flair-mod:before {
     content: "";
     text-align: right;
@@ -39,4 +47,4 @@ div.titlebox span.number:after {
 /* Flair */
 .linkflair-gold .title {
     background-color: gold
-    }
+    } 
