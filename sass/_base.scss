@@ -2,5 +2,6 @@
 
 body {
     @include body-style;
-    @import "imports/body";
 }
+
+@import "imports/body";
