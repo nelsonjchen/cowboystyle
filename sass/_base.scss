@@ -1,6 +1,6 @@
 @import "mixins/body-style";
 
-.listing-page {
+body {
     @include body-style;
     @import "imports/body";
 }
