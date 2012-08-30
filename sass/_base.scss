@@ -272,9 +272,9 @@ a {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~ Content ~~~~~~~~~~~~~~~~~~~~~~~ */
 
-body {
-    background-color: $sky_color;
-    background-image: $storke_middle_img;
+.listing-page {
+    background-color: $sky_color !important;
+    background-image: $storke_middle_img !important;
     background-repeat: repeat-y;
     background-position: 100% 70px;
     color: $plain_text_color;
