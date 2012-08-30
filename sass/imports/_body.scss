@@ -321,7 +321,7 @@ a {
         // RES do not do dashed borders for keyboard navigation
         .entry.keyHighlight {
             outline-width: 0;
-            border-right: 1px solid blue;
+            border-right: 2px solid $thing_keyHighlight_right;
         }
 
         .thumbnail {
