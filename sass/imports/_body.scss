@@ -324,6 +324,10 @@ a {
             outline-width: 0;
             border-right: 1px solid blue;
         }
+
+        .thumbnail {
+            background-color: $content_thumbnail_background_color;
+        }
     }
 }
 
