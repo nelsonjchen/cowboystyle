@@ -144,7 +144,7 @@ a {
     // Make space for the tower image element. The background is sky colored to
     // cover up the repeating element in the background.
     > .spacer:first-child {
-        background-color: $sky-color;
+        background-color: $sky-color !important;
         background-image: $storke_middle_img;
         background-repeat: no-repeat;
         background-position: 8px 250px;
