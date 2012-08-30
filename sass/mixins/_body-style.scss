@@ -1,3 +1,5 @@
+// This mixin is required to customize the top level element which unfortunately cannot be mixed in the normal way.
+
 @mixin body-style {
     background-color: $sky_color;
     background-image: $storke_middle_img;
