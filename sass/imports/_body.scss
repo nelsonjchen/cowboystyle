@@ -70,7 +70,7 @@ a {
     @include border-bottom-left-radius(7px);
     padding-left: 10px;
     height: 18px;
-    a, b, &>.separator {
+    a, b, &>.separator, .user, .userkarma {
         color: $ucsb_gold !important;
     }
 }
