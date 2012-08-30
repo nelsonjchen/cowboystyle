@@ -1,0 +1,9 @@
+// This uses the night version of the color variables for the night mode in RES.
+@import "colors/res-night-mode";
+@import "mixins/body-style";
+
+.res-nightmode {
+    @include body-style;
+    @import "imports/body";
+}
+
