@@ -40,10 +40,12 @@ end
 
 namespace :clipboard do
   task :day do
+    sh("compass compile --no-line-comments --force")
     sh("cat stylesheets/day.css | pbcopy")
   end
 
   task :night do
+    sh("compass compile --no-line-comments --force")
     sh("cat stylesheets/night.css | pbcopy")
   end
 end

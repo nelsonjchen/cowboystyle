@@ -1,7 +1,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~ Global ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 a {
-    color: $user_link_color;
+    /* [> color: $user_link_color; <] */
 }
 
 
@@ -320,7 +320,7 @@ a {
         // This is the little link to a user's profile underneath the entry link
         .tagline a {
             // user link color
-            color: $user_link_color;
+            /* color: $user_link_color; */
         }
 
         // RES do not do dashed borders for keyboard navigation
