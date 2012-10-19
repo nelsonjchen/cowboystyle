@@ -341,7 +341,12 @@ a {
             overflow: auto;
         }
         // Flat-list overridden with Wikipedia style flat list.
+        // http://en.wikipedia.org/wiki/Template:Flatlist
+        // These are the buttons for each post
         .flat-list {
+            li {
+                
+            }
         }
     }
 }
