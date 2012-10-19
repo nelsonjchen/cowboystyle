@@ -334,8 +334,15 @@ a {
             background-color: $content_thumbnail_background_color;
         }
     }
-    .child form {
-        overflow: auto;
+    
+    // Tweaking comments for small screen users
+    .comment {
+        form {
+            overflow: auto;
+        }
+        // Flat-list overridden with Wikipedia style flat list.
+        .flat-list {
+        }
     }
 }
 
