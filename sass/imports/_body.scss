@@ -336,7 +336,7 @@ a {
     }
     
     // Tweaking comments for small screen users
-    .comment {
+    .sitetable {
         form {
             overflow: auto;
         }
@@ -344,8 +344,10 @@ a {
         // http://en.wikipedia.org/wiki/Template:Flatlist
         // These are the buttons for each post
         .flat-list {
+            display: block;
             li {
-                
+                display: inline-block;
+                white-space: normal;
             }
         }
     }
