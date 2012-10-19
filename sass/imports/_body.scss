@@ -334,6 +334,9 @@ a {
             background-color: $content_thumbnail_background_color;
         }
     }
+    .child form {
+        overflow: auto;
+    }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~ */
