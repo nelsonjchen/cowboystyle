@@ -334,6 +334,23 @@ a {
             background-color: $content_thumbnail_background_color;
         }
     }
+    
+    // Tweaking comments for small screen users
+    .sitetable {
+        form {
+            overflow: auto;
+        }
+        // Flat-list overridden with Wikipedia style flat list.
+        // http://en.wikipedia.org/wiki/Template:Flatlist
+        // These are the buttons for each post
+        .flat-list {
+            display: block;
+            li {
+                display: inline-block;
+                white-space: normal;
+            }
+        }
+    }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~ */
