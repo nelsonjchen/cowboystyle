@@ -50,7 +50,6 @@ a {
 }
 
 .res-navTop {
-    top: 0 !important;
     z-index: 10 !important;
 }
 
@@ -148,7 +147,7 @@ a {
         background-image: $storke_middle_img;
         background-repeat: no-repeat;
         background-position: -8px 250px;
-        padding-top: 320px;
+        padding-top: 340px;
         margin: 0;
     }
 
@@ -160,7 +159,7 @@ a {
         background-image: $storke_top_img;
         background-position: -8px 0px;
         position: absolute;
-        top: 28px;
+        top: 48px;
         right: 0;
         height: 330px;
         width: 300px;
