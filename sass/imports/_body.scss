@@ -51,6 +51,8 @@ a {
 
 .res-navTop {
     z-index: 10 !important;
+    // Override RES bar height.
+    height: 12px !important;
 }
 
 #userbarToggle {
