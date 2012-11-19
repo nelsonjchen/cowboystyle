@@ -12,6 +12,11 @@ a {
     .srSep {
         color: $subreddit_bar_seperator_color !important;
     }
+
+    // Do not have width clip affecting this area.
+    .width-clip {
+        right: 0px !important;
+    }
 }
 
 #sr-header-area a, #sr-more-link, .srdrop > .selected {
@@ -31,17 +36,10 @@ a {
 }
 
 #RESShortcutsViewport {
-    padding-left: 50px;
 }
 
 #RESShortcutsEditContainer {
-    position: relative !important;
-    top: -18px !important;
-    left: 40px;
-    float: left;
-    width: 0 !important;
-    height: 1px !important;
-    z-index: 7 !important;
+    background-color: $subreddit_bar_color !important;
 }
 
 #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
@@ -50,28 +48,37 @@ a {
 }
 
 .res-navTop {
-    top: 0 !important;
     z-index: 10 !important;
+    // Override RES bar height.
+    height: 12px !important;
+    top: 19px !important;
 }
 
 #userbarToggle {
     background-color: darken($userbar_color, 10%) !important;
     border-right-color: darken($userbar_color, 15%) !important;
     color: $ucsb_gold !important;
-    min-height: 27px; // HotFix till RES Developers fix this.
+    min-height: 0px; // HotFix till RES Developers fix this.
+    line-height: 22px !important;
+    &.userbarShow{
+        min-height: 0px !important;
+    }
 }
 
 // Normal Variant
 
 #header-bottom-right {
     background-color: $userbar_color !important;
-    top: 0;
+    top: 19px;
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(7px);
     padding-left: 10px;
-    height: 18px;
+    height: 12px;
     a, b, &>.separator, .user, .userkarma {
         color: $ucsb_gold !important;
+    }
+    .login-required {
+        text-decoration: underline;
     }
 }
 
@@ -148,7 +155,7 @@ a {
         background-image: $storke_middle_img;
         background-repeat: no-repeat;
         background-position: -8px 250px;
-        padding-top: 320px;
+        padding-top: 340px;
         margin: 0;
     }
 
@@ -160,9 +167,9 @@ a {
         background-image: $storke_top_img;
         background-position: -8px 0px;
         position: absolute;
-        top: 28px;
+        top: 48px;
         right: 0;
-        height: 330px;
+        height: 314px;
         width: 300px;
         z-index: 52;
     }
@@ -332,6 +339,23 @@ a {
         // Thumbnaul color diff for night mode so it doesn't fall out.
         .thumbnail {
             background-color: $content_thumbnail_background_color;
+        }
+    }
+    
+    // Tweaking comments for small screen users
+    .sitetable {
+        form {
+            overflow: auto;
+        }
+        // Flat-list overridden with Wikipedia style flat list so that wrapping works.
+        // http://en.wikipedia.org/wiki/Template:Flatlist
+        // These are the buttons for each post
+        .flat-list {
+            display: block;
+            li {
+                display: inline-block;
+                white-space: normal;
+            }
         }
     }
 }
