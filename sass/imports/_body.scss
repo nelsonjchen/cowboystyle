@@ -60,8 +60,11 @@ a {
     background-color: darken($userbar_color, 10%) !important;
     border-right-color: darken($userbar_color, 15%) !important;
     color: $ucsb_gold !important;
-    min-height: 27px; // HotFix till RES Developers fix this.
+    min-height: 0px; // HotFix till RES Developers fix this.
     line-height: 22px !important;
+    &.userbarShow{
+        min-height: 0px !important;
+    }
 }
 
 // Normal Variant
