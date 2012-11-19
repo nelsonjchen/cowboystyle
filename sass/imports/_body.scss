@@ -53,6 +53,7 @@ a {
     z-index: 10 !important;
     // Override RES bar height.
     height: 12px !important;
+    top: 19px !important;
 }
 
 #userbarToggle {
@@ -60,17 +61,18 @@ a {
     border-right-color: darken($userbar_color, 15%) !important;
     color: $ucsb_gold !important;
     min-height: 27px; // HotFix till RES Developers fix this.
+    line-height: 22px !important;
 }
 
 // Normal Variant
 
 #header-bottom-right {
     background-color: $userbar_color !important;
-    top: 0;
+    top: 19px;
     @include border-top-left-radius(0);
     @include border-bottom-left-radius(7px);
     padding-left: 10px;
-    height: 18px;
+    height: 12px;
     a, b, &>.separator, .user, .userkarma {
         color: $ucsb_gold !important;
     }
