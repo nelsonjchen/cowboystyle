@@ -31,17 +31,10 @@ a {
 }
 
 #RESShortcutsViewport {
-    padding-left: 50px;
 }
 
 #RESShortcutsEditContainer {
-    position: relative !important;
-    top: -18px !important;
-    left: 40px;
-    float: left;
-    width: 0 !important;
-    height: 1px !important;
-    z-index: 7 !important;
+    background-color: $subreddit_bar_color !important;
 }
 
 #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
