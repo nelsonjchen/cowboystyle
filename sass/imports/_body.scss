@@ -72,6 +72,9 @@ a {
     a, b, &>.separator, .user, .userkarma {
         color: $ucsb_gold !important;
     }
+    .login-required a {
+        text-decoration: underline;
+    }
 }
 
 // Float Never Ending Reddit Toggle icon above elements, like the tower.
