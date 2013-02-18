@@ -295,6 +295,8 @@ be done before attempts at adding more ambitious features are added.
 Also, the SCSS could do with a cleanup. It's a patchwork that hopefully use of
 more SCSS features can help with.
 
+Also, a retina alien would be nice
+
 ## Random Notes
 
 Modded Official logo from http://satedproductions.com/tmp/reddit/alien/
